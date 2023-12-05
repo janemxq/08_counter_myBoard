@@ -1,0 +1,6 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="counter">
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component" CBX_FILE_NAME="ipcore_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>

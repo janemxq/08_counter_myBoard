@@ -1,0 +1,5 @@
+
+State Machine - |top_functionGenerate|functionGenerate:functionGenerate_inst|pulse_flag
+Name pulse_flag.01 
+pulse_flag.00 0 
+pulse_flag.01 1 

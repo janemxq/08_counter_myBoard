@@ -1,0 +1,5 @@
+PLL_Name	functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component|ipcore_altpll:auto_generated|pll1
+PLLJITTER	30
+PLLSPEmax	84
+PLLSPEmin	-53
+
