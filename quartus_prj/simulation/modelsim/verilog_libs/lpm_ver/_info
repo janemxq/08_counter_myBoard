@@ -9,7 +9,7 @@ z2
 cModel Technology
 dD:/Repos/FireWild/08_counter/quartus_prj/simulation/modelsim
 vlpm_abs
-Z0 !s110 1701763827
+Z0 !s110 1702352869
 !i10b 1
 !s100 <eMUJ2Bc:0iJb^8e`knSV1
 IY8P_0a@JYBG0Ze`B<S8nG0
@@ -23,7 +23,7 @@ Z6 OL;L;10.4;61
 r1
 !s85 0
 31
-Z7 !s108 1701763827.543000
+Z7 !s108 1702352869.917000
 Z8 !s107 d:/altera/13.1/quartus/eda/sim_lib/220model.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|lpm_ver|d:/altera/13.1/quartus/eda/sim_lib/220model.v|
 !i113 0
@@ -69,7 +69,7 @@ R9
 !i113 0
 R10
 vlpm_bipad
-R0
+Z11 !s110 1702352870
 !i10b 1
 !s100 d7c7;5C`<V5moD<]7UPO42
 I>hoc;VSRm]<ME:M2aOU7R1
@@ -270,7 +270,7 @@ R9
 !i113 0
 R10
 vlpm_fifo
-R0
+R11
 !i10b 1
 !s100 zlR`ilPP_6<azoT`F3=FV0
 Iba^RH^WVPg@U=XkOzB<Mf1
@@ -290,7 +290,7 @@ R9
 !i113 0
 R10
 vlpm_fifo_dc
-R0
+R11
 !i10b 1
 !s100 <8QF96S@z75V3EzZn_Y:<3
 IYOL]XcCS2PA=UHLL^LI=83
@@ -310,7 +310,7 @@ R9
 !i113 0
 R10
 vlpm_fifo_dc_async
-R0
+R11
 !i10b 1
 !s100 9e8_daW;h[FHI[zn@1S;l3
 INl;F2;a@7=<LYQ30oY=Lh3
@@ -330,7 +330,7 @@ R9
 !i113 0
 R10
 vlpm_fifo_dc_dffpipe
-R0
+R11
 !i10b 1
 !s100 3cDHAhhCfCUdbaBCADdQT0
 I;Ql4k30UM_NIL8>@BKWZg3
@@ -350,7 +350,7 @@ R9
 !i113 0
 R10
 vlpm_fifo_dc_fefifo
-R0
+R11
 !i10b 1
 !s100 z`AfG3CA8>1ZfA[[5flWH2
 I<D2ghJ1:gYGlL9f8OKb<g2
@@ -391,7 +391,7 @@ R9
 R10
 n@l@p@m_@h@i@n@t_@e@v@a@l@u@a@t@i@o@n
 vlpm_inpad
-R0
+R11
 !i10b 1
 !s100 0>Hk5GBQ643ZVi:cBU:1Q0
 IeiQ>z]=P1a@BBnzZgoleK0
@@ -532,7 +532,7 @@ R9
 !i113 0
 R10
 vlpm_outpad
-R0
+R11
 !i10b 1
 !s100 S_z=ic3?<Kl41^;8=6M=X1
 I7UnPLmfK2GAO1kaYf0oXA0
@@ -552,7 +552,7 @@ R9
 !i113 0
 R10
 vlpm_ram_dp
-R0
+R11
 !i10b 1
 !s100 C4CRM[JiWl69HFTnNEBOG2
 IV1LKP5fP4?7OU6M:l7Y]`0
@@ -592,7 +592,7 @@ R9
 !i113 0
 R10
 vlpm_ram_io
-R0
+R11
 !i10b 1
 !s100 bf7Gi1M[9IUf9kCUe1>E90
 Ia;kahBa_9df>:Jnm2kP881
@@ -612,7 +612,7 @@ R9
 !i113 0
 R10
 vlpm_rom
-R0
+R11
 !i10b 1
 !s100 MnU9fOdF]B4bAG2ce4jSn2
 Im<bE:=G;kc;D]91;;HTbJ2

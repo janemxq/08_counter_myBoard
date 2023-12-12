@@ -27,6 +27,8 @@ reg     [7:0]   rx_data[7:0];  //8个字节的数组
 reg     [2:0] rec_byte_cnt;//3位 0-7
 wire            po_flag;
 reg     [1:0]   enable_Pulse;
+reg     [6:0]   pulse_width[1:0];//两个脉冲的宽度 ，出现三个脉冲可能是宽度太大
+reg     [6:0]   pulse_gap;//脉冲之间的间隔宽度
 //dac_clka:DAC模块时钟
 
 
@@ -68,7 +70,10 @@ key_control key_control_inst
 	.sys_rst_n (sys_rst_n  ),   //全局复位
 	.key_select  (key_select ), //输入4位按键
 	.uart_flag (enable_Pulse[0]),  // po_flag2串口确认发脉冲信号
-	
+    .pulse_width1(pulse_width[0]),   //第一个脉冲的宽度 10ns一个单位
+	.pulse_width2(pulse_width[1]),   //第二个脉冲的宽度 10ns一个单位  
+	.pulse_gap(pulse_gap),   //脉冲之间的间隔 10ns一个单位
+
 	.pulse_out1  (pulse_out1 ) , 
 	.pulse_out2   (pulse_out2)
  );
@@ -118,9 +123,9 @@ uart_tx_inst
 );
 
 // 07 01 01 00 00 00  发脉冲命令，
-//第二个字节是第一路脉冲使能 ，第三个字节是第二路脉冲使能 ,
-// 第四个字节 第一路脉冲的脉冲宽度，第五个字节 第二路脉冲的脉冲宽度
-// 第六个字节 两个脉冲的间隔 ns
+//第二个字节是第一个脉冲使能 ，第三个字节是第一个脉冲的脉冲宽度 ,
+// 第四个字节 第二路脉冲的脉冲宽度，第五个字节 两个脉冲的间隔,
+
 
 always@(posedge po_flag or negedge sys_rst_n)
         if(sys_rst_n == 1'b0)
@@ -143,17 +148,25 @@ always@(posedge po_flag or negedge sys_rst_n)
           end		  
 		else if(rec_byte_cnt == 'd7)//8字节数据接收完毕
 				begin
+				     
 					  case(rx_data[0]) 
 						'd7:
 							begin
 							  enable_Pulse[0]<=rx_data[1];
-							  enable_Pulse[1]<=rx_data[2];					 
+							  enable_Pulse[1]<=rx_data[2];
+                              pulse_width[0]<=rx_data[3];
+							  pulse_width[1]<=rx_data[4];
+							  pulse_gap     <=rx_data[5];
 							end
 						default:
 							begin
 							  enable_Pulse[0]<=0;
 							  enable_Pulse[1]<=0;	
+							  pulse_width[0]<=0;
+							  pulse_width[1]<=0;
+							  pulse_gap     <=0;
 							end
 					   endcase					
 				end
+		
 endmodule

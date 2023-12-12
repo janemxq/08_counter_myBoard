@@ -9,21 +9,21 @@ z2
 cModel Technology
 Z0 dD:/Repos/FireWild/08_counter_myBoard/quartus_prj/simulation/modelsim
 T_opt
-!s110 1701763848
-V1?0[cUNeI7zYhbUToYi@G0
-04 10 4 work tb_uart_rx fast 0
-=1-a4bb6d03ef5d-656edb08-160-75f8
+!s110 1702352883
+V^o6h`W[g2]18l^QC9T4]72
+04 19 4 work tb_functionGenerate fast 0
+=1-a4bb6d03ef5d-6577d7f3-139-2a08
 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work +acc
 n@_opt
 OL;O;10.4;61
 vfunctionGenerate
-Z1 !s110 1701763845
+Z1 !s110 1702352880
 !i10b 1
-!s100 4BALR]^2A?]0IV:R;@cz21
-IJFUd9RLcOFk7:HPF]ec892
+!s100 ^Lz0SIA>jM[ADQPKdoM[@2
+IRMF;ING5K0Vg;QhhUm38i1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1701738811
+w1702346738
 8D:/Repos/FireWild/08_counter_myBoard/rtl/functionGenerate.v
 FD:/Repos/FireWild/08_counter_myBoard/rtl/functionGenerate.v
 L0 4
@@ -31,7 +31,7 @@ Z3 OL;L;10.4;61
 r1
 !s85 0
 31
-!s108 1701763845.315000
+!s108 1702352880.751000
 !s107 D:/Repos/FireWild/08_counter_myBoard/rtl/functionGenerate.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Repos/FireWild/08_counter_myBoard/rtl|D:/Repos/FireWild/08_counter_myBoard/rtl/functionGenerate.v|
 !i113 0
@@ -39,7 +39,7 @@ Z4 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -
 Z5 !s92 -vlog01compat -work work +incdir+D:/Repos/FireWild/08_counter_myBoard/rtl -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 nfunction@generate
 vipcore
-Z6 !s110 1701763846
+Z6 !s110 1702352881
 !i10b 1
 !s100 E<LKZ?9kfIh0]SYHVRE5D0
 IOF9j;VaD8KbElQz]mg_YX3
@@ -53,7 +53,7 @@ R3
 r1
 !s85 0
 31
-!s108 1701763846.303000
+!s108 1702352881.245000
 !s107 D:/Repos/FireWild/08_counter_myBoard/quartus_prj/ipcore_dir/ipcore.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Repos/FireWild/08_counter_myBoard/quartus_prj/ipcore_dir|D:/Repos/FireWild/08_counter_myBoard/quartus_prj/ipcore_dir/ipcore.v|
 !i113 0
@@ -74,7 +74,7 @@ R3
 r1
 !s85 0
 31
-!s108 1701763846.651000
+!s108 1702352881.431000
 !s107 D:/Repos/FireWild/08_counter_myBoard/quartus_prj/db/ipcore_altpll.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Repos/FireWild/08_counter_myBoard/quartus_prj/db|D:/Repos/FireWild/08_counter_myBoard/quartus_prj/db/ipcore_altpll.v|
 !i113 0
@@ -95,62 +95,63 @@ R3
 r1
 !s85 0
 31
-!s108 1701763845.663000
+!s108 1702352880.922000
 !s107 D:/Repos/FireWild/08_counter_myBoard/rtl/key_control.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Repos/FireWild/08_counter_myBoard/rtl|D:/Repos/FireWild/08_counter_myBoard/rtl/key_control.v|
 !i113 0
 R4
 R5
 vkey_filter
-R1
+R6
 !i10b 1
-!s100 JdLMiGj@oJio6@ffZNm_]2
-IjYO2`YlBz;6EDJ2m;DKWU2
+!s100 Mf1=J8]3A0?;KjcV2M6TN2
+IhZa^^GTKkFb2ZlcQ5QWCl3
 R2
 R0
-w1699422808
+w1701823134
 8D:/Repos/FireWild/08_counter_myBoard/rtl/key_filter.v
 FD:/Repos/FireWild/08_counter_myBoard/rtl/key_filter.v
-Z7 L0 20
+L0 16
 R3
 r1
 !s85 0
 31
-!s108 1701763845.983000
+!s108 1702352881.089000
 !s107 D:/Repos/FireWild/08_counter_myBoard/rtl/key_filter.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Repos/FireWild/08_counter_myBoard/rtl|D:/Repos/FireWild/08_counter_myBoard/rtl/key_filter.v|
 !i113 0
 R4
 R5
-vtb_uart_rx
+vtb_functionGenerate
 R6
 !i10b 1
-!s100 h1Z5IZI2MFABKIz2n]UEW1
-IKG]FV5cTSYZ7^5f^A`FT33
+!s100 7_0=m9`VmO;iE53J]=VR73
+I:;WY3R0VaX7Wd3:_bF;5O3
 R2
 R0
-w1701763819
-8D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim/tb_uart_rx.v
-FD:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim/tb_uart_rx.v
-R7
+w1702352848
+8D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim/tb_functionGenerate.v
+FD:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim/tb_functionGenerate.v
+L0 4
 R3
 r1
 !s85 0
 31
-!s108 1701763846.916000
-!s107 D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim/tb_uart_rx.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim|D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim/tb_uart_rx.v|
+!s108 1702352881.641000
+!s107 D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim/tb_functionGenerate.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim|D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim/tb_functionGenerate.v|
 !i113 0
 R4
 !s92 -vlog01compat -work work +incdir+D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+ntb_function@generate
 vtop_functionGenerate
 R1
 !i10b 1
-!s100 K=Y@z]7G[oiI7==F`D^z41
-Id8C_]R[j6^a1>37<HPLgP1
+!s100 nP=RKDX^9Wnf3^6H58R2I1
+I]3EEN;I`m0c9J6_nm7lVl2
 R2
 R0
-w1701745691
+w1702347605
 8D:/Repos/FireWild/08_counter_myBoard/rtl/top_functionGenerate.v
 FD:/Repos/FireWild/08_counter_myBoard/rtl/top_functionGenerate.v
 L0 3
@@ -158,7 +159,7 @@ R3
 r1
 !s85 0
 31
-!s108 1701763845.097000
+!s108 1702352880.562000
 !s107 D:/Repos/FireWild/08_counter_myBoard/rtl/top_functionGenerate.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Repos/FireWild/08_counter_myBoard/rtl|D:/Repos/FireWild/08_counter_myBoard/rtl/top_functionGenerate.v|
 !i113 0
@@ -166,7 +167,7 @@ R4
 R5
 ntop_function@generate
 vuart_rx
-Z8 !s110 1701763844
+R1
 !i10b 1
 !s100 a2Z^QGh[G_cco04:lP[f13
 I]kckz4GjM5WZJ0?0BgRba2
@@ -180,14 +181,14 @@ R3
 r1
 !s85 0
 31
-!s108 1701763844.880000
+!s108 1702352880.364000
 !s107 D:/Repos/FireWild/08_counter_myBoard/rtl/uart_rx.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Repos/FireWild/08_counter_myBoard/rtl|D:/Repos/FireWild/08_counter_myBoard/rtl/uart_rx.v|
 !i113 0
 R4
 R5
 vuart_tx
-R8
+R1
 !i10b 1
 !s100 PSePBY2R6G?lKCQm3zo1g3
 I4;h4EfT7Wge;6[bkCX>JV1
@@ -201,7 +202,7 @@ R3
 r1
 !s85 0
 31
-!s108 1701763844.565000
+!s108 1702352880.020000
 !s107 D:/Repos/FireWild/08_counter_myBoard/rtl/uart_tx.v|
 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/Repos/FireWild/08_counter_myBoard/rtl|D:/Repos/FireWild/08_counter_myBoard/rtl/uart_tx.v|
 !i113 0

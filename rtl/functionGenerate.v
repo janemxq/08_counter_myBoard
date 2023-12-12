@@ -7,9 +7,12 @@ module  functionGenerate
     input   wire    sys_clk     ,   //系统时钟50Mhz
     input   wire    sys_rst_n   ,   //全局复位
 	 input   wire    [3:0]   key_select         ,   //输入4位按键
-    input   wire  uart_flag,//一个触发沿
-	
-    output  reg     pulse_out1  ,       //
+    input   wire  	uart_flag,//一个触发沿
+	input 	wire  	[20:0]pulse_width1,   //第一个脉冲的宽度
+	input 	wire  	[20:0]pulse_width2,   //第二个脉冲的宽度
+	input 	 wire 	[20:0]pulse_gap,   //脉冲之间的间隔
+          
+	output  reg     pulse_out1  ,       //
 	output  reg     pulse_out2
 	//output  reg     led_out  
 );
@@ -81,7 +84,7 @@ always@(posedge my_clk or negedge sys_rst_n)
   else 
   begin
     
-    if((cnt == CNT_MAX))//||(pulse_flag == 2)
+    if(pulse_en == 1)//||(pulse_flag == 2)
         cnt <= 25'b0;
     else
         cnt <= cnt + 1'b1;
@@ -94,15 +97,25 @@ always@(posedge my_clk or negedge sys_rst_n) begin
 		pulse_out2<=1'b0;
 		 pulse_flag <= 1'b0;	
 	   end
-    else    if((cnt == CNT_MAX-25'd999)&& (pulse_flag==1))
+    else    if((cnt == 0) &&(pulse_en == 1))
 	     begin
-          pulse_out1 <= 1;
+          pulse_out1 <= 1;//第一个脉冲开始
 		  pulse_out2<=1;
          end
-    else    if((cnt == CNT_MAX-1) && (pulse_flag==1))
+    else    if((cnt == pulse_width1-1) && (pulse_flag==1))
 	     begin
-           pulse_out1 <= 0;//一直输出 看看电流多大
-		   pulse_out2<=0;
+           pulse_out1 <= 0;//第一个脉冲结束
+		   pulse_out2<=0;           		   
+         end
+    else    if((cnt == pulse_width1+pulse_gap-1) && (pulse_flag==1))
+	     begin
+           pulse_out1 <= 1;//第二个脉冲开始
+		   pulse_out2<=1;           		   
+         end
+    else    if((cnt == pulse_width1+pulse_width2+pulse_gap-1) && (pulse_flag==1))
+	     begin
+           pulse_out1 <= 0;//第二个脉冲结束
+		   pulse_out2 <= 0; 
            pulse_flag<=0;		   
          end
     else  if(pulse_en ==1)

@@ -42,11 +42,11 @@ vlog -vlog01compat -work work +incdir+D:/Repos/FireWild/08_counter_myBoard/rtl {
 vlog -vlog01compat -work work +incdir+D:/Repos/FireWild/08_counter_myBoard/quartus_prj/ipcore_dir {D:/Repos/FireWild/08_counter_myBoard/quartus_prj/ipcore_dir/ipcore.v}
 vlog -vlog01compat -work work +incdir+D:/Repos/FireWild/08_counter_myBoard/quartus_prj/db {D:/Repos/FireWild/08_counter_myBoard/quartus_prj/db/ipcore_altpll.v}
 
-vlog -vlog01compat -work work +incdir+D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim {D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim/tb_uart_rx.v}
+vlog -vlog01compat -work work +incdir+D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim {D:/Repos/FireWild/08_counter_myBoard/quartus_prj/../sim/tb_functionGenerate.v}
 
-vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_uart_rx
+vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  tb_functionGenerate
 
 add wave *
 view structure
 view signals
-run 11 ms
+run -all

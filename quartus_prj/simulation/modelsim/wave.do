@@ -1,13 +1,21 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /tb_uart_rx/sys_rst_n
-add wave -noupdate /tb_uart_rx/rx
-add wave -noupdate /tb_uart_rx/rec_byte_cnt
-add wave -noupdate /tb_uart_rx/po_data
-add wave -noupdate /tb_uart_rx/po_flag
-add wave -noupdate /tb_uart_rx/rx_data
+add wave -noupdate -height 30 /tb_functionGenerate/sys_rst_n
+add wave -noupdate -height 30 /tb_functionGenerate/uart_flag
+add wave -noupdate -height 30 -radix decimal /tb_functionGenerate/pulse_width1
+add wave -noupdate -height 30 -radix decimal /tb_functionGenerate/pulse_width2
+add wave -noupdate -height 30 -radix decimal /tb_functionGenerate/pulse_gap
+add wave -noupdate -height 30 -radix decimal /tb_functionGenerate/cnt
+add wave -noupdate -height 30 /tb_functionGenerate/pulse_flag
+add wave -noupdate -height 30 /tb_functionGenerate/po_flag_dly1
+add wave -noupdate -height 30 /tb_functionGenerate/po_flag_dly2
+add wave -noupdate -height 30 /tb_functionGenerate/pulse_en
+add wave -noupdate -height 30 /tb_functionGenerate/locked
+add wave -noupdate -height 30 /tb_functionGenerate/pulse_out1
+add wave -noupdate -height 30 /tb_functionGenerate/pulse_out2
+add wave -noupdate /tb_functionGenerate/my_clk
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {10999999459 ps} 0}
+WaveRestoreCursors {{Cursor 1} {150000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -23,4 +31,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits us
 update
-WaveRestoreZoom {10999999050 ps} {11000000050 ps}
+WaveRestoreZoom {0 ps} {315 ns}

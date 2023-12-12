@@ -9,7 +9,7 @@ z2
 cModel Technology
 dD:/Repos/FireWild/08_counter/quartus_prj/simulation/modelsim
 vio_buf_opdrn
-Z0 !s110 1701763830
+Z0 !s110 1702352871
 !i10b 1
 !s100 =^<AH`I:TA`[9YUe=h1;_1
 IzUVmb2AC4fVDY]KCV=H^^2
@@ -23,7 +23,7 @@ Z6 OL;L;10.4;61
 r1
 !s85 0
 31
-Z7 !s108 1701763830.322000
+Z7 !s108 1702352871.563000
 Z8 !s107 d:/altera/13.1/quartus/eda/sim_lib/sgate.v|
 Z9 !s90 -reportprogress|300|-vlog01compat|-work|sgate_ver|d:/altera/13.1/quartus/eda/sim_lib/sgate.v|
 !i113 0
