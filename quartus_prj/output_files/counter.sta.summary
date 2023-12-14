@@ -3,107 +3,107 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'functionGenerate_inst|pll_ip_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -10.989
-TNS   : -21.686
+Slack : -11.519
+TNS   : -22.413
 
 Type  : Slow 1200mV 85C Model Setup 'uart_rx:uart_rx_inst|po_flag'
-Slack : -2.366
-TNS   : -88.790
+Slack : -2.180
+TNS   : -105.839
 
 Type  : Slow 1200mV 85C Model Setup 'sys_clk'
-Slack : -0.505
-TNS   : -0.505
-
-Type  : Slow 1200mV 85C Model Hold 'sys_clk'
-Slack : 0.453
+Slack : 0.016
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'uart_rx:uart_rx_inst|po_flag'
-Slack : 0.453
+Type  : Slow 1200mV 85C Model Hold 'sys_clk'
+Slack : 0.386
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'functionGenerate_inst|pll_ip_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.508
+Slack : 0.452
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'uart_rx:uart_rx_inst|po_flag'
+Slack : 0.452
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'uart_rx:uart_rx_inst|po_flag'
 Slack : -1.487
-TNS   : -81.785
+TNS   : -93.681
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'functionGenerate_inst|pll_ip_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.698
+Slack : 4.718
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'sys_clk'
-Slack : 9.781
+Slack : 9.784
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'functionGenerate_inst|pll_ip_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -9.985
-TNS   : -19.678
+Slack : -10.404
+TNS   : -20.219
 
 Type  : Slow 1200mV 0C Model Setup 'uart_rx:uart_rx_inst|po_flag'
-Slack : -2.131
-TNS   : -79.067
+Slack : -1.972
+TNS   : -95.261
 
 Type  : Slow 1200mV 0C Model Setup 'sys_clk'
-Slack : -0.397
-TNS   : -0.397
-
-Type  : Slow 1200mV 0C Model Hold 'sys_clk'
-Slack : 0.402
+Slack : 0.134
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'uart_rx:uart_rx_inst|po_flag'
-Slack : 0.402
+Type  : Slow 1200mV 0C Model Hold 'sys_clk'
+Slack : 0.338
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'functionGenerate_inst|pll_ip_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.470
+Slack : 0.401
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'uart_rx:uart_rx_inst|po_flag'
+Slack : 0.401
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'uart_rx:uart_rx_inst|po_flag'
 Slack : -1.487
-TNS   : -81.785
+TNS   : -93.681
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'functionGenerate_inst|pll_ip_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.672
+Slack : 4.718
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'sys_clk'
-Slack : 9.771
+Slack : 9.772
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'functionGenerate_inst|pll_ip_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : -4.388
-TNS   : -8.698
+Slack : -4.497
+TNS   : -8.751
 
 Type  : Fast 1200mV 0C Model Setup 'uart_rx:uart_rx_inst|po_flag'
-Slack : -0.419
-TNS   : -9.538
+Slack : -0.329
+TNS   : -12.891
 
 Type  : Fast 1200mV 0C Model Setup 'sys_clk'
-Slack : 0.349
+Slack : 0.584
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'sys_clk'
-Slack : 0.186
+Slack : 0.108
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'uart_rx:uart_rx_inst|po_flag'
-Slack : 0.187
+Slack : 0.186
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'functionGenerate_inst|pll_ip_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 0.204
+Slack : 0.187
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'uart_rx:uart_rx_inst|po_flag'
 Slack : -1.000
-TNS   : -55.000
+TNS   : -63.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'functionGenerate_inst|pll_ip_inst|altpll_component|auto_generated|pll1|clk[0]'
-Slack : 4.774
+Slack : 4.797
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'sys_clk'

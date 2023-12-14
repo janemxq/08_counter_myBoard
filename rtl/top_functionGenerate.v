@@ -9,7 +9,8 @@ module  top_functionGenerate
 
     output  wire            pulse_out1,     //输出第一路脉冲信号
 	output  wire            pulse_out2,     //输出第二路脉冲信号
-	output  wire    tx              //串口发送数据
+	output  wire    tx     ,         //串口发送数据
+	output  wire    led_out  //调试灯
 );
 
 //********************************************************************//
@@ -76,6 +77,7 @@ key_control key_control_inst
 
 	.pulse_out1  (pulse_out1 ) , 
 	.pulse_out2   (pulse_out2)
+	//.led_out      (led_out)
  );
 
 //------------------------ uart_rx_inst ------------------------
@@ -121,52 +123,60 @@ uart_tx_inst
                 
     .tx         (tx         )   //output            tx
 );
-
+// 如果长时间没有信号使能脉冲，将接收字节计数器置零,防止数据错位情况，待测试。
+// 产生使能信号的脉冲
+always@(posedge po_flag or negedge sys_rst_n)
+        if(sys_rst_n == 1'b0)
+		   enable_Pulse[0]<=0;
+        else if((rec_byte_cnt == 'd7) && (rx_data[0] == 'd7) && (rx_data[1] == 'd1))
+		   enable_Pulse[0]<=1;
+		else
+		   enable_Pulse[0]<=0;
 // 07 01 01 00 00 00  发脉冲命令，
 //第二个字节是第一个脉冲使能 ，第三个字节是第一个脉冲的脉冲宽度 ,
-// 第四个字节 第二路脉冲的脉冲宽度，第五个字节 两个脉冲的间隔,
-
-
+// 第四个字节 第二路脉冲的脉冲宽度，第五个字节 两个脉冲的间隔,		  
 always@(posedge po_flag or negedge sys_rst_n)
         if(sys_rst_n == 1'b0)
 			 begin
 				rec_byte_cnt<=1'b0;	
 				rx_data[0]<=1'b0;rx_data[1]<=1'b0;rx_data[2]<=1'b0;rx_data[3]<=1'b0;
 				rx_data[4]<=1'b0;rx_data[5]<=1'b0;rx_data[6]<=1'b0;rx_data[7]<=1'b0;
-							
+				pulse_width[0]<=0;pulse_width[1]<=0;
+			    pulse_gap     <=0;
+				//enable_Pulse[0]<=0;	enable_Pulse[1]<=0;	
 			end         
 		else
 		   begin
 		    rx_data[rec_byte_cnt]<=po_data;
+				if(rec_byte_cnt == 'd7)//8字节数据接收完毕
+					begin
+						 
+						  case(rx_data[0]) 
+							'd7://头字符
+								begin
+								  led_reg<=~led_reg;
+								  //enable_Pulse[0]<=rx_data[1];
+								  //enable_Pulse[1]<=rx_data[2];
+								  pulse_width[0]<=rx_data[3];
+								  pulse_width[1]<=rx_data[4];
+								  pulse_gap     <=rx_data[5];
+								  
+								end
+							/* 'hEE://头字符 复位
+								begin
+								 
+								end */
+							default:
+								 begin
+								  //enable_Pulse[0]<=0;
+								  //enable_Pulse[1]<=0;	
+								  pulse_width[0]<=0;
+								  pulse_width[1]<=0;
+								  pulse_gap     <=0;
+								end
+						   endcase					
+					end
 			rec_byte_cnt<=	rec_byte_cnt+1;		
             //led_reg = ~led_reg;	
 		   end
-always@(posedge po_flag or negedge sys_rst_n)
-        if(sys_rst_n == 1'b0)
-		  begin
-		  enable_Pulse[0]<=0; enable_Pulse[1]<=0;
-          end		  
-		else if(rec_byte_cnt == 'd7)//8字节数据接收完毕
-				begin
-				     
-					  case(rx_data[0]) 
-						'd7:
-							begin
-							  enable_Pulse[0]<=rx_data[1];
-							  enable_Pulse[1]<=rx_data[2];
-                              pulse_width[0]<=rx_data[3];
-							  pulse_width[1]<=rx_data[4];
-							  pulse_gap     <=rx_data[5];
-							end
-						default:
-							begin
-							  enable_Pulse[0]<=0;
-							  enable_Pulse[1]<=0;	
-							  pulse_width[0]<=0;
-							  pulse_width[1]<=0;
-							  pulse_gap     <=0;
-							end
-					   endcase					
-				end
-		
 endmodule

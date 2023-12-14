@@ -1,5 +1,5 @@
 Analysis & Synthesis report for counter
-Tue Dec 12 15:23:36 2023
+Wed Dec 13 16:04:36 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -60,16 +60,16 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 12 15:23:36 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 13 16:04:36 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; counter                                     ;
 ; Top-level Entity Name              ; top_functionGenerate                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 302                                         ;
-;     Total combinational functions  ; 253                                         ;
-;     Dedicated logic registers      ; 125                                         ;
-; Total registers                    ; 125                                         ;
-; Total pins                         ; 10                                          ;
+; Total logic elements               ; 308                                         ;
+;     Total combinational functions  ; 251                                         ;
+;     Dedicated logic registers      ; 133                                         ;
+; Total registers                    ; 133                                         ;
+; Total pins                         ; 11                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -207,31 +207,31 @@ applicable agreement for further details.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 302             ;
+; Estimated Total logic elements              ; 308             ;
 ;                                             ;                 ;
-; Total combinational functions               ; 253             ;
+; Total combinational functions               ; 251             ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 75              ;
-;     -- 3 input functions                    ; 57              ;
-;     -- <=2 input functions                  ; 121             ;
+;     -- 4 input functions                    ; 72              ;
+;     -- 3 input functions                    ; 56              ;
+;     -- <=2 input functions                  ; 123             ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 126             ;
+;     -- normal mode                          ; 124             ;
 ;     -- arithmetic mode                      ; 127             ;
 ;                                             ;                 ;
-; Total registers                             ; 125             ;
-;     -- Dedicated logic registers            ; 125             ;
+; Total registers                             ; 133             ;
+;     -- Dedicated logic registers            ; 133             ;
 ;     -- I/O registers                        ; 0               ;
 ;                                             ;                 ;
-; I/O pins                                    ; 10              ;
+; I/O pins                                    ; 11              ;
 ; Embedded Multiplier 9-bit elements          ; 0               ;
 ; Total PLLs                                  ; 1               ;
 ;     -- PLLs                                 ; 1               ;
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; sys_rst_n~input ;
-; Maximum fan-out                             ; 105             ;
-; Total fan-out                               ; 1125            ;
-; Average fan-out                             ; 2.82            ;
+; Maximum fan-out                             ; 133             ;
+; Total fan-out                               ; 1168            ;
+; Average fan-out                             ; 2.87            ;
 +---------------------------------------------+-----------------+
 
 
@@ -240,8 +240,8 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_functionGenerate                       ; 253 (36)          ; 125 (55)     ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |top_functionGenerate                                                                                                                ; work         ;
-;    |functionGenerate:functionGenerate_inst| ; 183 (183)         ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst                                                                         ; work         ;
+; |top_functionGenerate                       ; 251 (37)          ; 133 (63)     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |top_functionGenerate                                                                                                                ; work         ;
+;    |functionGenerate:functionGenerate_inst| ; 180 (180)         ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst                                                                         ; work         ;
 ;       |ipcore:pll_ip_inst|                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst                                                      ; work         ;
 ;          |altpll:altpll_component|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component                              ; work         ;
 ;             |ipcore_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component|ipcore_altpll:auto_generated ; work         ;
@@ -307,12 +307,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 125   ;
+; Total registers                              ; 133   ;
 ; Number of registers using Synchronous Clear  ; 38    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 104   ;
+; Number of registers using Asynchronous Clear ; 132   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 66    ;
+; Number of registers using Clock Enable       ; 74    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -334,7 +334,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
-; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |top_functionGenerate|functionGenerate:functionGenerate_inst|pulse_flag ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top_functionGenerate|functionGenerate:functionGenerate_inst|pulse_flag ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------+
 
 
@@ -864,7 +864,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Tue Dec 12 15:23:35 2023
+    Info: Processing started: Wed Dec 13 16:04:34 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off counter -c counter
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_myboard/sim/tb_uart_rx.v
@@ -889,19 +889,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file ipcore_
     Info (12023): Found entity 1: ipcore
 Warning (10236): Verilog HDL Implicit Net warning at tb_functionGenerate.v(60): created implicit net for "pulse_en"
 Warning (10236): Verilog HDL Implicit Net warning at tb_functionGenerate.v(141): created implicit net for "locked"
-Warning (10236): Verilog HDL Implicit Net warning at top_functionGenerate.v(43): created implicit net for "led_out"
 Warning (10236): Verilog HDL Implicit Net warning at functionGenerate.v(42): created implicit net for "pulse_en"
-Warning (10236): Verilog HDL Implicit Net warning at functionGenerate.v(244): created implicit net for "locked"
+Warning (10236): Verilog HDL Implicit Net warning at functionGenerate.v(242): created implicit net for "locked"
 Info (12127): Elaborating entity "top_functionGenerate" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top_functionGenerate.v(43): object "led_out" assigned a value but never read
-Warning (10036): Verilog HDL or VHDL warning at top_functionGenerate.v(37): object "i" assigned a value but never read
-Warning (10858): Verilog HDL warning at top_functionGenerate.v(38): object led_reg used but never assigned
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(141): truncated value with size 32 to match size of target (3)
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(155): truncated value with size 8 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(156): truncated value with size 8 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(157): truncated value with size 8 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(158): truncated value with size 8 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(159): truncated value with size 8 to match size of target (7)
+Warning (10036): Verilog HDL or VHDL warning at top_functionGenerate.v(38): object "i" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(160): truncated value with size 8 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(161): truncated value with size 8 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(162): truncated value with size 8 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(179): truncated value with size 32 to match size of target (3)
 Info (12128): Elaborating entity "key_control" for hierarchy "key_control:key_control_inst"
 Info (12128): Elaborating entity "key_filter" for hierarchy "key_control:key_control_inst|key_filter:key_filter_inst3"
 Info (12128): Elaborating entity "functionGenerate" for hierarchy "functionGenerate:functionGenerate_inst"
@@ -983,15 +978,15 @@ Warning (21074): Design contains 4 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "key[1]"
     Warning (15610): No output dependent on input pin "key[2]"
     Warning (15610): No output dependent on input pin "key[3]"
-Info (21057): Implemented 314 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 321 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 303 logic cells
+    Info (21059): Implemented 4 output pins
+    Info (21061): Implemented 309 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
-    Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Tue Dec 12 15:23:36 2023
-    Info: Elapsed time: 00:00:01
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 17 warnings
+    Info: Peak virtual memory: 4646 megabytes
+    Info: Processing ended: Wed Dec 13 16:04:36 2023
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 
 

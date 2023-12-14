@@ -7,7 +7,7 @@ module  functionGenerate
     input   wire    sys_clk     ,   //系统时钟50Mhz
     input   wire    sys_rst_n   ,   //全局复位
 	 input   wire    [3:0]   key_select         ,   //输入4位按键
-    input   wire  	uart_flag,//一个触发沿
+    input   wire  	uart_flag,//是否发送脉冲标志,脉冲信号
 	input 	wire  	[20:0]pulse_width1,   //第一个脉冲的宽度
 	input 	wire  	[20:0]pulse_width2,   //第二个脉冲的宽度
 	input 	 wire 	[20:0]pulse_gap,   //脉冲之间的间隔
@@ -101,6 +101,7 @@ always@(posedge my_clk or negedge sys_rst_n) begin
 	     begin
           pulse_out1 <= 1;//第一个脉冲开始
 		  pulse_out2<=1;
+		   pulse_flag<= 1;
          end
     else    if((cnt == pulse_width1-1) && (pulse_flag==1))
 	     begin
@@ -116,13 +117,10 @@ always@(posedge my_clk or negedge sys_rst_n) begin
 	     begin
            pulse_out1 <= 0;//第二个脉冲结束
 		   pulse_out2 <= 0; 
+		   //led_out=~led_out;
            pulse_flag<=0;		   
          end
-    else  if(pulse_en ==1)
-		   begin
-            pulse_flag<= 1;	           
-		   end
-	 else
+   	 else
 		  begin
 		    pulse_flag<= pulse_flag;		    			
 		  end	  
