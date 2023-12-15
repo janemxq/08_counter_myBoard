@@ -1,5 +1,5 @@
 Flow report for counter
-Wed Dec 13 16:04:51 2023
+Thu Dec 14 14:55:56 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Wed Dec 13 16:04:51 2023       ;
+; Flow Status                        ; Successful - Thu Dec 14 14:55:56 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; counter                                     ;
 ; Top-level Entity Name              ; top_functionGenerate                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10F17C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 299 / 10,320 ( 3 % )                        ;
-;     Total combinational functions  ; 251 / 10,320 ( 2 % )                        ;
-;     Dedicated logic registers      ; 133 / 10,320 ( 1 % )                        ;
-; Total registers                    ; 133                                         ;
+; Total logic elements               ; 356 / 10,320 ( 3 % )                        ;
+;     Total combinational functions  ; 320 / 10,320 ( 3 % )                        ;
+;     Dedicated logic registers      ; 181 / 10,320 ( 2 % )                        ;
+; Total registers                    ; 181                                         ;
 ; Total pins                         ; 11 / 180 ( 6 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 423,936 ( 0 % )                         ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/13/2023 16:04:35 ;
+; Start date & time ; 12/14/2023 14:55:35 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; counter             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+----------------------+---------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name          ; Section Id          ;
 +--------------------------------------+---------------------------------------+---------------+----------------------+---------------------+
-; COMPILER_SIGNATURE_ID                ; 181124894814045.170245467500720       ; --            ; --                   ; --                  ;
+; COMPILER_SIGNATURE_ID                ; 181124894814045.170253693508136       ; --            ; --                   ; --                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --                   ; tb_functionGenerate ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --                   ; tb_uart_rx          ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_functionGenerate                   ; --            ; --                   ; eda_simulation      ;
@@ -112,12 +112,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4646 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:06     ; 2.2                     ; 5376 MB             ; 00:00:06                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 4597 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4667 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4546 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:11     ; --                      ; --                  ; 00:00:11                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4645 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:07     ; 2.0                     ; 5379 MB             ; 00:00:07                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 4578 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 4664 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4557 MB             ; 00:00:01                           ;
+; Total                     ; 00:00:15     ; --                      ; --                  ; 00:00:13                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

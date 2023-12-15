@@ -23,6 +23,8 @@ parameter   UART_BPS    =   14'd9600        ,   //比特率
 //wire  define
 
 wire    [3:0]   key_select ;   //按键选择
+wire      [1:0]   key_en;    //按键触发信号
+reg      [1:0]   uart_en;    //串口触发信号
 wire    [7:0]   po_data;
 reg     [7:0]   rx_data[7:0];  //8个字节的数组
 reg     [2:0] rec_byte_cnt;//3位 0-7
@@ -36,7 +38,7 @@ reg     [6:0]   pulse_gap;//脉冲之间的间隔宽度
 reg  po_flag2;
 
 integer i = 0;
-reg   led_reg;
+reg   [1:0]led_reg;
 
 // 接收数据的上升沿判断
 
@@ -62,7 +64,8 @@ key_control key_control_inst
     .sys_rst_n      (sys_rst_n  ),   //复位信号,低电平有效
     .key            (key        ),   //输入4位按键
 
-    .key_select    (key_select)    //输出稳定后4位按键
+    .key_select    (key_select)   , //输出稳定后4位按键
+	.key_en        (key_en) //按键脉冲信号
  );
  //-----------------------脉冲输出
  functionGenerate functionGenerate_inst
@@ -118,20 +121,46 @@ uart_tx_inst
 (
     .sys_clk    (sys_clk    ),  //input             sys_clk
     .sys_rst_n  (sys_rst_n  ),  //input             sys_rst_n
-    .pi_data    (po_data    ),  //input     [7:0]   pi_data
-    .pi_flag    (po_flag2    ),  //input             pi_flag
+    .pi_data    (key_select    ),  //input     [7:0]   pi_data
+    .pi_flag    (po_flag    ),  //input             pi_flag
                 
     .tx         (tx         )   //output            tx
 );
 // 如果长时间没有信号使能脉冲，将接收字节计数器置零,防止数据错位情况，待测试。
 // 产生使能信号的脉冲
-always@(posedge po_flag or negedge sys_rst_n)
+/* always@(posedge sys_clk or negedge sys_rst_n)
+        if(sys_rst_n == 1'b0)
+		   led_reg<=0;
+        else if(key_en ==1)
+		  begin
+		   led_reg <= ~led_reg;
+		   enable_Pulse[0]<=1;
+		  end
+		else 
+		  begin
+		   led_reg <= led_reg;
+		   enable_Pulse[0]<=0;
+		  end */
+		   
+// 如果长时间没有信号使能脉冲，将接收字节计数器置零,防止数据错位情况，待测试。
+// 产生使能信号的脉冲
+//按键单独可以，如果和接收信号或了以后就不行了，待研究。
+always@(posedge sys_clk or negedge sys_rst_n)
         if(sys_rst_n == 1'b0)
 		   enable_Pulse[0]<=0;
-        else if((rec_byte_cnt == 'd7) && (rx_data[0] == 'd7) && (rx_data[1] == 'd1))
+       /*  else if((key_en == 1))//(uart_en ==1)||
 		   enable_Pulse[0]<=1;
+		else if((uart_en ==1))
+		   enable_Pulse[0]<=1; */
 		else
-		   enable_Pulse[0]<=0;
+		   enable_Pulse[0]<=(key_en||uart_en);
+always@(posedge po_flag or negedge sys_rst_n)
+        if(sys_rst_n == 1'b0)
+		   uart_en<=0;
+        else if((rec_byte_cnt == 'd7) && (rx_data[0] == 'd7) && (rx_data[1] == 'd1))
+		   uart_en<=1;
+		else
+		   uart_en<=0;
 // 07 01 01 00 00 00  发脉冲命令，
 //第二个字节是第一个脉冲使能 ，第三个字节是第一个脉冲的脉冲宽度 ,
 // 第四个字节 第二路脉冲的脉冲宽度，第五个字节 两个脉冲的间隔,		  
@@ -154,7 +183,7 @@ always@(posedge po_flag or negedge sys_rst_n)
 						  case(rx_data[0]) 
 							'd7://头字符
 								begin
-								  led_reg<=~led_reg;
+								  //led_reg<=~led_reg;
 								  //enable_Pulse[0]<=rx_data[1];
 								  //enable_Pulse[1]<=rx_data[2];
 								  pulse_width[0]<=rx_data[3];

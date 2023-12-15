@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at functionGenerate.v(93): always construct contains both blocking and non-blocking assignments
+Warning (10268): Verilog HDL information at top_functionGenerate.v(128): always construct contains both blocking and non-blocking assignments

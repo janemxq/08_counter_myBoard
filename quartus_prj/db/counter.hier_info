@@ -9,7 +9,7 @@ rx => rx.IN1
 pulse_out1 <= functionGenerate:functionGenerate_inst.pulse_out1
 pulse_out2 <= functionGenerate:functionGenerate_inst.pulse_out2
 tx <= uart_tx:uart_tx_inst.tx
-led_out <= led_reg.DB_MAX_OUTPUT_PORT_TYPE
+led_out <= <GND>
 
 
 |top_functionGenerate|key_control:key_control_inst
@@ -23,6 +23,7 @@ key_select[0] <= key_select[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 key_select[1] <= key_select[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 key_select[2] <= key_select[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 key_select[3] <= key_select[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+key_en <= key_en~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_functionGenerate|key_control:key_control_inst|key_filter:key_filter_inst3
