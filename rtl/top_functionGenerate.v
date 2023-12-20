@@ -4,7 +4,7 @@ module  top_functionGenerate
 (
     input   wire            sys_clk     ,   //系统时钟,50MHz
     input   wire            sys_rst_n   ,   //复位信号,低电平有效
-    input   wire    [3:0]   key         ,   //输入4位按键
+    input   wire    [1:0]   key         ,   //输入2位按键
 	input   wire    rx          ,   //串口接收数据
 
     output  wire            pulse_out1,     //输出第一路脉冲信号
@@ -35,7 +35,7 @@ reg     [6:0]   pulse_gap;//脉冲之间的间隔宽度
 //dac_clka:DAC模块时钟
 
 
-reg  po_flag2;
+reg  po_flag2=0;
 
 integer i = 0;
 reg   [1:0]led_reg;
@@ -121,8 +121,8 @@ uart_tx_inst
 (
     .sys_clk    (sys_clk    ),  //input             sys_clk
     .sys_rst_n  (sys_rst_n  ),  //input             sys_rst_n
-    .pi_data    (key_select    ),  //input     [7:0]   pi_data
-    .pi_flag    (po_flag    ),  //input             pi_flag
+    .pi_data    (po_data    ),  //input     [7:0]   pi_data
+    .pi_flag    (po_flag2    ),  //input             pi_flag
                 
     .tx         (tx         )   //output            tx
 );
@@ -154,13 +154,23 @@ always@(posedge sys_clk or negedge sys_rst_n)
 		   enable_Pulse[0]<=1; */
 		else
 		   enable_Pulse[0]<=(key_en||uart_en);
+//串口检测命令输出使能发送脉冲命令，po_flag2有些问题，设置后存在测试灯不亮的问题
 always@(posedge po_flag or negedge sys_rst_n)
         if(sys_rst_n == 1'b0)
-		   uart_en<=0;
-        else if((rec_byte_cnt == 'd7) && (rx_data[0] == 'd7) && (rx_data[1] == 'd1))
+		   begin
+		    uart_en<=0;po_flag2<=0;
+		   end
+        else if((rec_byte_cnt == 'd7)  && (rx_data[0] == 'd7)&& (rx_data[1] == 'd1))//
+		   begin
 		   uart_en<=1;
+		   led_reg = ~led_reg;
+		   //po_flag2<=1;
+		   end
 		else
-		   uart_en<=0;
+		   begin
+		   po_flag2<=0;
+           uart_en<=0;		   
+		   end
 // 07 01 01 00 00 00  发脉冲命令，
 //第二个字节是第一个脉冲使能 ，第三个字节是第一个脉冲的脉冲宽度 ,
 // 第四个字节 第二路脉冲的脉冲宽度，第五个字节 两个脉冲的间隔,		  
@@ -176,6 +186,7 @@ always@(posedge po_flag or negedge sys_rst_n)
 			end         
 		else
 		   begin
+		   
 		    rx_data[rec_byte_cnt]<=po_data;
 				if(rec_byte_cnt == 'd7)//8字节数据接收完毕
 					begin
@@ -188,13 +199,8 @@ always@(posedge po_flag or negedge sys_rst_n)
 								  //enable_Pulse[1]<=rx_data[2];
 								  pulse_width[0]<=rx_data[3];
 								  pulse_width[1]<=rx_data[4];
-								  pulse_gap     <=rx_data[5];
-								  
-								end
-							/* 'hEE://头字符 复位
-								begin
-								 
-								end */
+								  pulse_gap     <=rx_data[5];								 
+								end							
 							default:
 								 begin
 								  //enable_Pulse[0]<=0;

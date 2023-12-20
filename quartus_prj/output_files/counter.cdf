@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE10F17) Path("D:/Repos/FireWild/08_counter_myBoard/quartus_prj/output_files/") File("counter.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE10F17) Path("D:/Repos/FireWild/08_counter_two/quartus_prj/output_files/") File("counter.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

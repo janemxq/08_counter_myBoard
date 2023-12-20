@@ -6,7 +6,7 @@ module  functionGenerate
 (
     input   wire    sys_clk     ,   //系统时钟50Mhz
     input   wire    sys_rst_n   ,   //全局复位
-	 input   wire    [3:0]   key_select         ,   //输入4位按键
+	 input   wire    [1:0]   key_select         ,   //输入4位按键
     input   wire  	uart_flag,//是否发送脉冲标志,脉冲信号
 	input 	wire  	[20:0]pulse_width1,   //第一个脉冲的宽度
 	input 	wire  	[20:0]pulse_width2,   //第二个脉冲的宽度

@@ -4,9 +4,9 @@ module  key_control
 (
     input   wire            sys_clk     ,   //系统时钟,50MHz
     input   wire            sys_rst_n   ,   //复位信号,低电平有效
-    input   wire    [3:0]   key         ,   //输入4位按键
+    input   wire    [1:0]   key         ,   //输入2位按键
 
-    output  reg     [3:0]   key_select ,     //输出波形选择
+    output  reg     [1:0]   key_select ,     //输出波形选择
 	output  reg          key_en      //按键脉冲信号
 );
 
@@ -15,15 +15,12 @@ module  key_control
 //********************************************************************//
 //parameter define
 parameter   key0_select    =   4'b0001,    //第一个按键
-            key1_select    =   4'b0010,    //第二个按键
-            key2_select    =   4'b0100,    //第三个按键
-            key3_select    =   4'b1000;    //第四个按键
+            key1_select    =   4'b0010;    //第二个按键
+
 			
 parameter   CNT_MAX =   20'd999_999;    //计数器计数最大值
 
 //wire  define
-wire            key3    ;   //按键3
-wire            key2    ;   //按键2
 wire            key1    ;   //按键1
 wire            key0    ;   //按键0
 
@@ -74,33 +71,6 @@ always@(posedge sys_clk or negedge sys_rst_n)
 //********************************************************************//
 //*************************** Instantiation **************************//
 //********************************************************************//
-//------------- key_fifter_inst3 --------------
-key_filter 
-#(
-    .CNT_MAX      (CNT_MAX  )       //计数器计数最大值
-)
-key_filter_inst3
-(
-    .sys_clk      (sys_clk  )   ,   //系统时钟50Mhz
-    .sys_rst_n    (sys_rst_n)   ,   //全局复位
-    .key_in       (key[3]   )   ,   //按键输入信号
-
-    .key_flag     (key3     )       //按键消抖后标志信号
-);
-
-//------------- key_fifter_inst2 --------------
-key_filter 
-#(
-    .CNT_MAX      (CNT_MAX  )       //计数器计数最大值
-)
-key_filter_inst2
-(
-    .sys_clk      (sys_clk  )   ,   //系统时钟50Mhz
-    .sys_rst_n    (sys_rst_n)   ,   //全局复位
-    .key_in       (key[2]   )   ,   //按键输入信号
-
-    .key_flag     (key2     )       //按键消抖后标志信号
-);
 
 //------------- key_fifter_inst1 --------------
 key_filter 

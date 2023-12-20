@@ -1,5 +1,5 @@
 Analysis & Synthesis report for counter
-Thu Dec 14 14:55:37 2023
+Wed Dec 20 10:49:28 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -16,29 +16,26 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
   8. Analysis & Synthesis IP Cores Summary
   9. State Machine - |top_functionGenerate|functionGenerate:functionGenerate_inst|pulse_flag
  10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Inverted Register Statistics
- 13. Multiplexer Restructuring Statistics (Restructuring Performed)
- 14. Parameter Settings for User Entity Instance: Top-level Entity: |top_functionGenerate
- 15. Parameter Settings for User Entity Instance: key_control:key_control_inst
- 16. Parameter Settings for User Entity Instance: key_control:key_control_inst|key_filter:key_filter_inst3
- 17. Parameter Settings for User Entity Instance: key_control:key_control_inst|key_filter:key_filter_inst2
- 18. Parameter Settings for User Entity Instance: key_control:key_control_inst|key_filter:key_filter_inst1
- 19. Parameter Settings for User Entity Instance: key_control:key_control_inst|key_filter:key_filter_inst0
- 20. Parameter Settings for User Entity Instance: functionGenerate:functionGenerate_inst
- 21. Parameter Settings for User Entity Instance: functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component
- 22. Parameter Settings for User Entity Instance: uart_rx:uart_rx_inst
- 23. Parameter Settings for User Entity Instance: uart_tx:uart_tx_inst
- 24. altpll Parameter Settings by Entity Instance
- 25. Port Connectivity Checks: "uart_tx:uart_tx_inst"
- 26. Port Connectivity Checks: "functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst"
- 27. Port Connectivity Checks: "functionGenerate:functionGenerate_inst"
- 28. Port Connectivity Checks: "key_control:key_control_inst|key_filter:key_filter_inst1"
- 29. Port Connectivity Checks: "key_control:key_control_inst|key_filter:key_filter_inst2"
- 30. Port Connectivity Checks: "key_control:key_control_inst|key_filter:key_filter_inst3"
- 31. Port Connectivity Checks: "key_control:key_control_inst"
- 32. Elapsed Time Per Partition
- 33. Analysis & Synthesis Messages
+ 11. Removed Registers Triggering Further Register Optimizations
+ 12. General Register Statistics
+ 13. Inverted Register Statistics
+ 14. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 15. Parameter Settings for User Entity Instance: Top-level Entity: |top_functionGenerate
+ 16. Parameter Settings for User Entity Instance: key_control:key_control_inst
+ 17. Parameter Settings for User Entity Instance: key_control:key_control_inst|key_filter:key_filter_inst1
+ 18. Parameter Settings for User Entity Instance: key_control:key_control_inst|key_filter:key_filter_inst0
+ 19. Parameter Settings for User Entity Instance: functionGenerate:functionGenerate_inst
+ 20. Parameter Settings for User Entity Instance: functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component
+ 21. Parameter Settings for User Entity Instance: uart_rx:uart_rx_inst
+ 22. Parameter Settings for User Entity Instance: uart_tx:uart_tx_inst
+ 23. altpll Parameter Settings by Entity Instance
+ 24. Port Connectivity Checks: "functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst"
+ 25. Port Connectivity Checks: "functionGenerate:functionGenerate_inst"
+ 26. Port Connectivity Checks: "key_control:key_control_inst|key_filter:key_filter_inst1"
+ 27. Port Connectivity Checks: "key_control:key_control_inst"
+ 28. Elapsed Time Per Partition
+ 29. Analysis & Synthesis Messages
+ 30. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -64,16 +61,16 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Dec 14 14:55:37 2023       ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 20 10:49:28 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; counter                                     ;
 ; Top-level Entity Name              ; top_functionGenerate                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 379                                         ;
-;     Total combinational functions  ; 320                                         ;
-;     Dedicated logic registers      ; 181                                         ;
-; Total registers                    ; 181                                         ;
-; Total pins                         ; 11                                          ;
+; Total logic elements               ; 341                                         ;
+;     Total combinational functions  ; 282                                         ;
+;     Dedicated logic registers      ; 158                                         ;
+; Total registers                    ; 158                                         ;
+; Total pins                         ; 9                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -185,25 +182,25 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                             ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
-; ../rtl/uart_tx.v                 ; yes             ; User Verilog HDL File        ; D:/Repos/FireWild/08_counter_myBoard/rtl/uart_tx.v                   ;         ;
-; ../rtl/uart_rx.v                 ; yes             ; User Verilog HDL File        ; D:/Repos/FireWild/08_counter_myBoard/rtl/uart_rx.v                   ;         ;
-; ../rtl/top_functionGenerate.v    ; yes             ; User Verilog HDL File        ; D:/Repos/FireWild/08_counter_myBoard/rtl/top_functionGenerate.v      ;         ;
-; ../rtl/functionGenerate.v        ; yes             ; User Verilog HDL File        ; D:/Repos/FireWild/08_counter_myBoard/rtl/functionGenerate.v          ;         ;
-; ../rtl/key_control.v             ; yes             ; User Verilog HDL File        ; D:/Repos/FireWild/08_counter_myBoard/rtl/key_control.v               ;         ;
-; ../rtl/key_filter.v              ; yes             ; User Verilog HDL File        ; D:/Repos/FireWild/08_counter_myBoard/rtl/key_filter.v                ;         ;
-; ipcore_dir/ipcore.v              ; yes             ; User Wizard-Generated File   ; D:/Repos/FireWild/08_counter_myBoard/quartus_prj/ipcore_dir/ipcore.v ;         ;
-; altpll.tdf                       ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/altpll.tdf            ;         ;
-; aglobal131.inc                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc        ;         ;
-; stratix_pll.inc                  ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/stratix_pll.inc       ;         ;
-; stratixii_pll.inc                ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/stratixii_pll.inc     ;         ;
-; cycloneii_pll.inc                ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/cycloneii_pll.inc     ;         ;
-; db/ipcore_altpll.v               ; yes             ; Auto-Generated Megafunction  ; D:/Repos/FireWild/08_counter_myBoard/quartus_prj/db/ipcore_altpll.v  ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                     ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
+; ../rtl/uart_tx.v                 ; yes             ; User Verilog HDL File        ; D:/Repos/FireWild/08_counter_two/rtl/uart_tx.v                   ;         ;
+; ../rtl/uart_rx.v                 ; yes             ; User Verilog HDL File        ; D:/Repos/FireWild/08_counter_two/rtl/uart_rx.v                   ;         ;
+; ../rtl/top_functionGenerate.v    ; yes             ; User Verilog HDL File        ; D:/Repos/FireWild/08_counter_two/rtl/top_functionGenerate.v      ;         ;
+; ../rtl/functionGenerate.v        ; yes             ; User Verilog HDL File        ; D:/Repos/FireWild/08_counter_two/rtl/functionGenerate.v          ;         ;
+; ../rtl/key_control.v             ; yes             ; User Verilog HDL File        ; D:/Repos/FireWild/08_counter_two/rtl/key_control.v               ;         ;
+; ../rtl/key_filter.v              ; yes             ; User Verilog HDL File        ; D:/Repos/FireWild/08_counter_two/rtl/key_filter.v                ;         ;
+; ipcore_dir/ipcore.v              ; yes             ; User Wizard-Generated File   ; D:/Repos/FireWild/08_counter_two/quartus_prj/ipcore_dir/ipcore.v ;         ;
+; altpll.tdf                       ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/altpll.tdf        ;         ;
+; aglobal131.inc                   ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc    ;         ;
+; stratix_pll.inc                  ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/stratix_pll.inc   ;         ;
+; stratixii_pll.inc                ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/stratixii_pll.inc ;         ;
+; cycloneii_pll.inc                ; yes             ; Megafunction                 ; d:/altera/13.1/quartus/libraries/megafunctions/cycloneii_pll.inc ;         ;
+; db/ipcore_altpll.v               ; yes             ; Auto-Generated Megafunction  ; D:/Repos/FireWild/08_counter_two/quartus_prj/db/ipcore_altpll.v  ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------------+
@@ -211,31 +208,31 @@ applicable agreement for further details.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 379             ;
+; Estimated Total logic elements              ; 341             ;
 ;                                             ;                 ;
-; Total combinational functions               ; 320             ;
+; Total combinational functions               ; 282             ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 95              ;
-;     -- 3 input functions                    ; 65              ;
-;     -- <=2 input functions                  ; 160             ;
+;     -- 4 input functions                    ; 79              ;
+;     -- 3 input functions                    ; 58              ;
+;     -- <=2 input functions                  ; 145             ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 162             ;
-;     -- arithmetic mode                      ; 158             ;
+;     -- normal mode                          ; 136             ;
+;     -- arithmetic mode                      ; 146             ;
 ;                                             ;                 ;
-; Total registers                             ; 181             ;
-;     -- Dedicated logic registers            ; 181             ;
+; Total registers                             ; 158             ;
+;     -- Dedicated logic registers            ; 158             ;
 ;     -- I/O registers                        ; 0               ;
 ;                                             ;                 ;
-; I/O pins                                    ; 11              ;
+; I/O pins                                    ; 9               ;
 ; Embedded Multiplier 9-bit elements          ; 0               ;
 ; Total PLLs                                  ; 1               ;
 ;     -- PLLs                                 ; 1               ;
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; sys_rst_n~input ;
-; Maximum fan-out                             ; 181             ;
-; Total fan-out                               ; 1558            ;
-; Average fan-out                             ; 2.97            ;
+; Maximum fan-out                             ; 158             ;
+; Total fan-out                               ; 1358            ;
+; Average fan-out                             ; 2.96            ;
 +---------------------------------------------+-----------------+
 
 
@@ -244,26 +241,25 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_functionGenerate                       ; 320 (37)          ; 181 (63)     ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |top_functionGenerate                                                                                                                ; work         ;
+; |top_functionGenerate                       ; 282 (39)          ; 158 (64)     ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |top_functionGenerate                                                                                                                ; work         ;
 ;    |functionGenerate:functionGenerate_inst| ; 180 (180)         ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst                                                                         ; work         ;
 ;       |ipcore:pll_ip_inst|                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst                                                      ; work         ;
 ;          |altpll:altpll_component|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component                              ; work         ;
 ;             |ipcore_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component|ipcore_altpll:auto_generated ; work         ;
-;    |key_control:key_control_inst|           ; 34 (6)            ; 28 (7)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|key_control:key_control_inst                                                                                   ; work         ;
+;    |key_control:key_control_inst|           ; 29 (1)            ; 24 (3)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|key_control:key_control_inst                                                                                   ; work         ;
 ;       |key_filter:key_filter_inst0|         ; 28 (28)           ; 21 (21)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|key_control:key_control_inst|key_filter:key_filter_inst0                                                       ; work         ;
 ;    |uart_rx:uart_rx_inst|                   ; 34 (34)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|uart_rx:uart_rx_inst                                                                                           ; work         ;
-;    |uart_tx:uart_tx_inst|                   ; 35 (35)           ; 20 (20)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|uart_tx:uart_tx_inst                                                                                           ; work         ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis IP Cores Summary                                                                                                                                                                                  ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------+----------------------------------------------------------------------+
-; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                 ; IP Include File                                                      ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------+----------------------------------------------------------------------+
-; Altera ; ALTPLL       ; 13.1    ; N/A          ; N/A          ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst ; D:/Repos/FireWild/08_counter_myBoard/quartus_prj/ipcore_dir/ipcore.v ;
-+--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------+----------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis IP Cores Summary                                                                                                                                                                              ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------+------------------------------------------------------------------+
+; Vendor ; IP Core Name ; Version ; Release Date ; License Type ; Entity Instance                                                                 ; IP Include File                                                  ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------+------------------------------------------------------------------+
+; Altera ; ALTPLL       ; 13.1    ; N/A          ; N/A          ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst ; D:/Repos/FireWild/08_counter_two/quartus_prj/ipcore_dir/ipcore.v ;
++--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------------+------------------------------------------------------------------+
 
 
 Encoding Type:  One-Hot
@@ -283,10 +279,34 @@ Encoding Type:  One-Hot
 ; Register name                                       ; Reason for Removal                                            ;
 +-----------------------------------------------------+---------------------------------------------------------------+
 ; uart_en[1]                                          ; Stuck at GND due to stuck port data_in                        ;
+; po_flag2                                            ; Stuck at GND due to stuck port data_in                        ;
 ; functionGenerate:functionGenerate_inst|pulse_out2   ; Merged with functionGenerate:functionGenerate_inst|pulse_out1 ;
+; uart_tx:uart_tx_inst|work_en                        ; Stuck at GND due to stuck port data_in                        ;
+; uart_tx:uart_tx_inst|baud_cnt[0..12]                ; Stuck at GND due to stuck port data_in                        ;
+; uart_tx:uart_tx_inst|bit_flag                       ; Stuck at GND due to stuck port data_in                        ;
+; uart_tx:uart_tx_inst|tx                             ; Stuck at VCC due to stuck port clock_enable                   ;
+; uart_tx:uart_tx_inst|bit_cnt[0..3]                  ; Stuck at GND due to stuck port data_in                        ;
 ; functionGenerate:functionGenerate_inst|pulse_flag~6 ; Lost fanout                                                   ;
-; Total Number of Removed Registers = 3               ;                                                               ;
+; Total Number of Removed Registers = 24              ;                                                               ;
 +-----------------------------------------------------+---------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                       ;
++---------------+---------------------------+-----------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                                ;
++---------------+---------------------------+-----------------------------------------------------------------------+
+; po_flag2      ; Stuck at GND              ; uart_tx:uart_tx_inst|work_en, uart_tx:uart_tx_inst|baud_cnt[12],      ;
+;               ; due to stuck port data_in ; uart_tx:uart_tx_inst|baud_cnt[11], uart_tx:uart_tx_inst|baud_cnt[10], ;
+;               ;                           ; uart_tx:uart_tx_inst|baud_cnt[9], uart_tx:uart_tx_inst|baud_cnt[8],   ;
+;               ;                           ; uart_tx:uart_tx_inst|baud_cnt[7], uart_tx:uart_tx_inst|baud_cnt[6],   ;
+;               ;                           ; uart_tx:uart_tx_inst|baud_cnt[5], uart_tx:uart_tx_inst|baud_cnt[4],   ;
+;               ;                           ; uart_tx:uart_tx_inst|baud_cnt[3], uart_tx:uart_tx_inst|baud_cnt[2],   ;
+;               ;                           ; uart_tx:uart_tx_inst|baud_cnt[1], uart_tx:uart_tx_inst|baud_cnt[0],   ;
+;               ;                           ; uart_tx:uart_tx_inst|bit_flag, uart_tx:uart_tx_inst|tx,               ;
+;               ;                           ; uart_tx:uart_tx_inst|bit_cnt[3], uart_tx:uart_tx_inst|bit_cnt[2],     ;
+;               ;                           ; uart_tx:uart_tx_inst|bit_cnt[1], uart_tx:uart_tx_inst|bit_cnt[0]      ;
++---------------+---------------------------+-----------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -294,10 +314,10 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 181   ;
-; Number of registers using Synchronous Clear  ; 71    ;
-; Number of registers using Synchronous Load   ; 1     ;
-; Number of registers using Asynchronous Clear ; 181   ;
+; Total registers                              ; 158   ;
+; Number of registers using Synchronous Clear  ; 58    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 157   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 94    ;
 ; Number of registers using Preset             ; 0     ;
@@ -309,11 +329,10 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; uart_tx:uart_tx_inst|tx                ; 2       ;
 ; uart_rx:uart_rx_inst|rx_reg3           ; 2       ;
 ; uart_rx:uart_rx_inst|rx_reg2           ; 2       ;
 ; uart_rx:uart_rx_inst|rx_reg1           ; 1       ;
-; Total number of inverted registers = 4 ;         ;
+; Total number of inverted registers = 3 ;         ;
 +----------------------------------------+---------+
 
 
@@ -322,8 +341,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
-; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_functionGenerate|uart_tx:uart_tx_inst|bit_cnt[1]                                      ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top_functionGenerate|key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[8] ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top_functionGenerate|key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[2] ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; No         ; |top_functionGenerate|functionGenerate:functionGenerate_inst|pulse_flag                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 
@@ -347,30 +365,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+----------------------+-----------------------------------+
 ; key0_select    ; 0001                 ; Unsigned Binary                   ;
 ; key1_select    ; 0010                 ; Unsigned Binary                   ;
-; key2_select    ; 0100                 ; Unsigned Binary                   ;
-; key3_select    ; 1000                 ; Unsigned Binary                   ;
 ; CNT_MAX        ; 11110100001000111111 ; Unsigned Binary                   ;
 +----------------+----------------------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: key_control:key_control_inst|key_filter:key_filter_inst3 ;
-+----------------+----------------------+---------------------------------------------------------------+
-; Parameter Name ; Value                ; Type                                                          ;
-+----------------+----------------------+---------------------------------------------------------------+
-; CNT_MAX        ; 11110100001000111111 ; Unsigned Binary                                               ;
-+----------------+----------------------+---------------------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-------------------------------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: key_control:key_control_inst|key_filter:key_filter_inst2 ;
-+----------------+----------------------+---------------------------------------------------------------+
-; Parameter Name ; Value                ; Type                                                          ;
-+----------------+----------------------+---------------------------------------------------------------+
-; CNT_MAX        ; 11110100001000111111 ; Unsigned Binary                                               ;
-+----------------+----------------------+---------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -818,15 +814,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+-----------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "uart_tx:uart_tx_inst"                                                                                                                             ;
-+---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                                                                                                         ;
-+---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; pi_data ; Input ; Warning  ; Input port expression (4 bits) is smaller than the input port (8 bits) it drives.  Extra input bit(s) "pi_data[7..4]" will be connected to GND. ;
-+---------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst"                                                                                     ;
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
@@ -837,15 +824,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +--------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "functionGenerate:functionGenerate_inst"                                                                                                                       ;
-+--------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type  ; Severity ; Details                                                                                                                                                ;
-+--------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; pulse_width1 ; Input ; Warning  ; Input port expression (7 bits) is smaller than the input port (21 bits) it drives.  Extra input bit(s) "pulse_width1[20..7]" will be connected to GND. ;
-; pulse_width2 ; Input ; Warning  ; Input port expression (7 bits) is smaller than the input port (21 bits) it drives.  Extra input bit(s) "pulse_width2[20..7]" will be connected to GND. ;
-; pulse_gap    ; Input ; Warning  ; Input port expression (7 bits) is smaller than the input port (21 bits) it drives.  Extra input bit(s) "pulse_gap[20..7]" will be connected to GND.    ;
-+--------------+-------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "functionGenerate:functionGenerate_inst"                                                                                                                                                 ;
++--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port         ; Type  ; Severity ; Details                                                                                                                                                                          ;
++--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; key_select   ; Input ; Warning  ; Input port expression (4 bits) is wider than the input port (2 bits) it drives.  The 2 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; pulse_width1 ; Input ; Warning  ; Input port expression (7 bits) is smaller than the input port (21 bits) it drives.  Extra input bit(s) "pulse_width1[20..7]" will be connected to GND.                           ;
+; pulse_width2 ; Input ; Warning  ; Input port expression (7 bits) is smaller than the input port (21 bits) it drives.  Extra input bit(s) "pulse_width2[20..7]" will be connected to GND.                           ;
+; pulse_gap    ; Input ; Warning  ; Input port expression (7 bits) is smaller than the input port (21 bits) it drives.  Extra input bit(s) "pulse_gap[20..7]" will be connected to GND.                              ;
++--------------+-------+----------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -857,31 +845,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "key_control:key_control_inst|key_filter:key_filter_inst2"                               ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; key_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "key_control:key_control_inst|key_filter:key_filter_inst3"                               ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; key_flag ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "key_control:key_control_inst"                                                                                                                                           ;
-+--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port   ; Type   ; Severity ; Details                                                                                                                                                               ;
-+--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; key_en ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (2 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
-+--------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_control:key_control_inst"                                                                                                                                               ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                               ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; key_select ; Output ; Warning  ; Output or bidir port (2 bits) is smaller than the port expression (4 bits) it drives.  The 2 most-significant bit(s) in the port expression will be connected to GND. ;
+; key_en     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (2 bits) it drives.  The 1 most-significant bit(s) in the port expression will be connected to GND. ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -899,26 +870,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Thu Dec 14 14:55:35 2023
+    Info: Processing started: Wed Dec 20 10:49:27 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off counter -c counter
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
-Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_myboard/sim/tb_uart_rx.v
+Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_two/sim/tb_uart_rx.v
     Info (12023): Found entity 1: tb_uart_rx
-Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_myboard/sim/tb_functiongenerate.v
+Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_two/sim/tb_functiongenerate.v
     Info (12023): Found entity 1: tb_functionGenerate
-Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_myboard/rtl/uart_tx.v
+Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_two/rtl/uart_tx.v
     Info (12023): Found entity 1: uart_tx
-Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_myboard/rtl/uart_rx.v
+Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_two/rtl/uart_rx.v
     Info (12023): Found entity 1: uart_rx
-Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_myboard/rtl/top_functiongenerate.v
+Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_two/rtl/top_functiongenerate.v
     Info (12023): Found entity 1: top_functionGenerate
-Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_myboard/rtl/functiongenerate.v
+Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_two/rtl/functiongenerate.v
     Info (12023): Found entity 1: functionGenerate
-Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_myboard/rtl/key_control.v
+Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_two/rtl/key_control.v
     Info (12023): Found entity 1: key_control
-Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_myboard/rtl/key_filter.v
+Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_two/rtl/key_filter.v
     Info (12023): Found entity 1: key_filter
-Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_myboard/sim/tb_counter.v
+Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_two/sim/tb_counter.v
     Info (12023): Found entity 1: tb_counter
 Info (12021): Found 1 design units, including 1 entities, in source file ipcore_dir/ipcore.v
     Info (12023): Found entity 1: ipcore
@@ -926,19 +897,18 @@ Warning (10236): Verilog HDL Implicit Net warning at tb_functionGenerate.v(60): 
 Warning (10236): Verilog HDL Implicit Net warning at tb_functionGenerate.v(141): created implicit net for "locked"
 Warning (10236): Verilog HDL Implicit Net warning at functionGenerate.v(42): created implicit net for "pulse_en"
 Warning (10236): Verilog HDL Implicit Net warning at functionGenerate.v(242): created implicit net for "locked"
-Warning (10236): Verilog HDL Implicit Net warning at key_control.v(35): created implicit net for "key_trigger_en"
+Warning (10236): Verilog HDL Implicit Net warning at key_control.v(32): created implicit net for "key_trigger_en"
 Info (12127): Elaborating entity "top_functionGenerate" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at top_functionGenerate.v(40): object "i" assigned a value but never read
-Warning (10858): Verilog HDL warning at top_functionGenerate.v(41): object led_reg used but never assigned
 Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(46): truncated value with size 2 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(188): truncated value with size 8 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(189): truncated value with size 8 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(190): truncated value with size 8 to match size of target (7)
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(207): truncated value with size 32 to match size of target (3)
-Warning (10030): Net "led_reg[0]" at top_functionGenerate.v(41) has no driver or initial value, using a default initial value '0'
+Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(200): truncated value with size 8 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(201): truncated value with size 8 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(202): truncated value with size 8 to match size of target (7)
+Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(214): truncated value with size 32 to match size of target (3)
 Info (12128): Elaborating entity "key_control" for hierarchy "key_control:key_control_inst"
-Warning (10230): Verilog HDL assignment warning at key_control.v(59): truncated value with size 32 to match size of target (4)
-Info (12128): Elaborating entity "key_filter" for hierarchy "key_control:key_control_inst|key_filter:key_filter_inst3"
+Warning (10230): Verilog HDL assignment warning at key_control.v(54): truncated value with size 4 to match size of target (2)
+Warning (10230): Verilog HDL assignment warning at key_control.v(56): truncated value with size 32 to match size of target (2)
+Info (12128): Elaborating entity "key_filter" for hierarchy "key_control:key_control_inst|key_filter:key_filter_inst1"
 Info (12128): Elaborating entity "functionGenerate" for hierarchy "functionGenerate:functionGenerate_inst"
 Info (12128): Elaborating entity "ipcore" for hierarchy "functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst"
 Info (12128): Elaborating entity "altpll" for hierarchy "functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component"
@@ -1004,28 +974,36 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/ipco
 Info (12128): Elaborating entity "ipcore_altpll" for hierarchy "functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component|ipcore_altpll:auto_generated"
 Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:uart_rx_inst"
 Info (12128): Elaborating entity "uart_tx" for hierarchy "uart_tx:uart_tx_inst"
-Warning (12241): 4 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "key_select[3]" is missing source, defaulting to GND
+    Warning (12110): Net "key_select[2]" is missing source, defaulting to GND
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13000): Registers with preset signals will power-up high
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "led_out" is stuck at GND
+    Warning (13410): Pin "tx" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/Repos/FireWild/08_counter_two/quartus_prj/output_files/counter.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
+Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "key[1]"
-    Warning (15610): No output dependent on input pin "key[2]"
-    Warning (15610): No output dependent on input pin "key[3]"
-Info (21057): Implemented 393 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 7 input pins
+Info (21057): Implemented 352 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 381 logic cells
+    Info (21061): Implemented 342 logic cells
     Info (21065): Implemented 1 PLLs
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 21 warnings
     Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Thu Dec 14 14:55:37 2023
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Wed Dec 20 10:49:28 2023
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Repos/FireWild/08_counter_two/quartus_prj/output_files/counter.map.smsg.
 
 
