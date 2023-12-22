@@ -8,9 +8,9 @@ module  functionGenerate
     input   wire    sys_rst_n   ,   //全局复位
 	 input   wire    [1:0]   key_select         ,   //输入4位按键
     input   wire  	uart_flag,//是否发送脉冲标志,脉冲信号
-	input 	wire  	[20:0]pulse_width1,   //第一个脉冲的宽度
-	input 	wire  	[20:0]pulse_width2,   //第二个脉冲的宽度
-	input 	 wire 	[20:0]pulse_gap,   //脉冲之间的间隔
+	input 	wire  	[15:0]pulse_width1,   //第一个脉冲的宽度
+	input 	wire  	[15:0]pulse_width2,   //第二个脉冲的宽度
+	input 	 wire 	[15:0]pulse_gap,   //脉冲之间的间隔
           
 	output  reg     pulse_out1  ,       //
 	output  reg     pulse_out2
@@ -72,7 +72,7 @@ end
 //********************************************************************//
 //***************************** Main Code ****************************//
 //3,125 是 大约 60us  521 是 大约 10us    2 是大约 40ns  
-//999   是 10us （myClk 100Mhz)  5 是  50ns
+//999   是 10us （myClk 100Mhz)  5 是  50ns，要求最大脉宽100us 间隔最大10us
 //********************************************************************//
 //cnt:计数器计数,当计数到CNT_MAX的值时清零
 always@(posedge my_clk or negedge sys_rst_n)
