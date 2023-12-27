@@ -1,5 +1,5 @@
 Fitter report for counter
-Fri Dec 22 14:45:48 2023
+Wed Dec 27 16:54:52 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -70,15 +70,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Fri Dec 22 14:45:48 2023       ;
+; Fitter Status                      ; Successful - Wed Dec 27 16:54:52 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; counter                                     ;
 ; Top-level Entity Name              ; top_functionGenerate                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10F17C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 372 / 10,320 ( 4 % )                        ;
-;     Total combinational functions  ; 314 / 10,320 ( 3 % )                        ;
+; Total logic elements               ; 401 / 10,320 ( 4 % )                        ;
+;     Total combinational functions  ; 330 / 10,320 ( 3 % )                        ;
 ;     Dedicated logic registers      ; 205 / 10,320 ( 2 % )                        ;
 ; Total registers                    ; 205                                         ;
 ; Total pins                         ; 9 / 180 ( 5 % )                             ;
@@ -156,12 +156,12 @@ applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.60        ;
+; Average used               ; 1.86        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;  20.0%      ;
+;     Processors 2-4         ;  28.6%      ;
 ;     Processors 5-8         ;   0.0%      ;
 +----------------------------+-------------+
 
@@ -184,8 +184,8 @@ applicable agreement for further details.
 ; Type                ; Total [A + B]      ; From Design Partitions [A] ; From Rapid Recompile [B] ;
 +---------------------+--------------------+----------------------------+--------------------------+
 ; Placement (by node) ;                    ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 550 ) ; 0.00 % ( 0 / 550 )         ; 0.00 % ( 0 / 550 )       ;
-;     -- Achieved     ; 0.00 % ( 0 / 550 ) ; 0.00 % ( 0 / 550 )         ; 0.00 % ( 0 / 550 )       ;
+;     -- Requested    ; 0.00 % ( 0 / 567 ) ; 0.00 % ( 0 / 567 )         ; 0.00 % ( 0 / 567 )       ;
+;     -- Achieved     ; 0.00 % ( 0 / 567 ) ; 0.00 % ( 0 / 567 )         ; 0.00 % ( 0 / 567 )       ;
 ;                     ;                    ;                            ;                          ;
 ; Routing (by net)    ;                    ;                            ;                          ;
 ;     -- Requested    ; 0.00 % ( 0 / 0 )   ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
@@ -208,7 +208,7 @@ applicable agreement for further details.
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 ; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 540 )    ; N/A                     ; Source File       ; N/A                 ;       ;
+; Top                            ; 0.00 % ( 0 / 557 )    ; N/A                     ; Source File       ; N/A                 ;       ;
 ; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
 +--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
 
@@ -224,48 +224,48 @@ The pin-out file can be found in D:/Repos/FireWild/08_counter_myBoard/quartus_pr
 +---------------------------------------------+----------------------+
 ; Resource                                    ; Usage                ;
 +---------------------------------------------+----------------------+
-; Total logic elements                        ; 372 / 10,320 ( 4 % ) ;
-;     -- Combinational with no register       ; 167                  ;
-;     -- Register only                        ; 58                   ;
-;     -- Combinational with a register        ; 147                  ;
+; Total logic elements                        ; 401 / 10,320 ( 4 % ) ;
+;     -- Combinational with no register       ; 196                  ;
+;     -- Register only                        ; 71                   ;
+;     -- Combinational with a register        ; 134                  ;
 ;                                             ;                      ;
 ; Logic element usage by number of LUT inputs ;                      ;
-;     -- 4 input functions                    ; 77                   ;
-;     -- 3 input functions                    ; 107                  ;
-;     -- <=2 input functions                  ; 130                  ;
-;     -- Register only                        ; 58                   ;
+;     -- 4 input functions                    ; 130                  ;
+;     -- 3 input functions                    ; 71                   ;
+;     -- <=2 input functions                  ; 129                  ;
+;     -- Register only                        ; 71                   ;
 ;                                             ;                      ;
 ; Logic elements by mode                      ;                      ;
-;     -- normal mode                          ; 156                  ;
+;     -- normal mode                          ; 172                  ;
 ;     -- arithmetic mode                      ; 158                  ;
 ;                                             ;                      ;
 ; Total registers*                            ; 205 / 11,172 ( 2 % ) ;
 ;     -- Dedicated logic registers            ; 205 / 10,320 ( 2 % ) ;
 ;     -- I/O registers                        ; 0 / 852 ( 0 % )      ;
 ;                                             ;                      ;
-; Total LABs:  partially or completely used   ; 30 / 645 ( 5 % )     ;
+; Total LABs:  partially or completely used   ; 34 / 645 ( 5 % )     ;
 ; Virtual pins                                ; 0                    ;
 ; I/O pins                                    ; 9 / 180 ( 5 % )      ;
 ;     -- Clock pins                           ; 2 / 3 ( 67 % )       ;
 ;     -- Dedicated input pins                 ; 0 / 9 ( 0 % )        ;
 ;                                             ;                      ;
-; Global signals                              ; 3                    ;
+; Global signals                              ; 4                    ;
 ; M9Ks                                        ; 0 / 46 ( 0 % )       ;
 ; Total block memory bits                     ; 0 / 423,936 ( 0 % )  ;
 ; Total block memory implementation bits      ; 0 / 423,936 ( 0 % )  ;
 ; Embedded Multiplier 9-bit elements          ; 0 / 46 ( 0 % )       ;
 ; PLLs                                        ; 1 / 2 ( 50 % )       ;
-; Global clocks                               ; 3 / 10 ( 30 % )      ;
+; Global clocks                               ; 4 / 10 ( 40 % )      ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )        ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
 ; Impedance control blocks                    ; 0 / 4 ( 0 % )        ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
-; Peak interconnect usage (total/H/V)         ; 1% / 1% / 2%         ;
-; Maximum fan-out                             ; 204                  ;
-; Highest non-global fan-out                  ; 56                   ;
-; Total fan-out                               ; 1747                 ;
-; Average fan-out                             ; 2.96                 ;
+; Peak interconnect usage (total/H/V)         ; 3% / 3% / 3%         ;
+; Maximum fan-out                             ; 205                  ;
+; Highest non-global fan-out                  ; 57                   ;
+; Total fan-out                               ; 1874                 ;
+; Average fan-out                             ; 2.97                 ;
 +---------------------------------------------+----------------------+
 *  Register count does not include registers inside RAM blocks or DSP blocks.
 
@@ -278,26 +278,26 @@ The pin-out file can be found in D:/Repos/FireWild/08_counter_myBoard/quartus_pr
 +---------------------------------------------+---------------------+--------------------------------+
 ; Difficulty Clustering Region                ; Low                 ; Low                            ;
 ;                                             ;                     ;                                ;
-; Total logic elements                        ; 372 / 10320 ( 4 % ) ; 0 / 10320 ( 0 % )              ;
-;     -- Combinational with no register       ; 167                 ; 0                              ;
-;     -- Register only                        ; 58                  ; 0                              ;
-;     -- Combinational with a register        ; 147                 ; 0                              ;
+; Total logic elements                        ; 401 / 10320 ( 4 % ) ; 0 / 10320 ( 0 % )              ;
+;     -- Combinational with no register       ; 196                 ; 0                              ;
+;     -- Register only                        ; 71                  ; 0                              ;
+;     -- Combinational with a register        ; 134                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic element usage by number of LUT inputs ;                     ;                                ;
-;     -- 4 input functions                    ; 77                  ; 0                              ;
-;     -- 3 input functions                    ; 107                 ; 0                              ;
-;     -- <=2 input functions                  ; 130                 ; 0                              ;
-;     -- Register only                        ; 58                  ; 0                              ;
+;     -- 4 input functions                    ; 130                 ; 0                              ;
+;     -- 3 input functions                    ; 71                  ; 0                              ;
+;     -- <=2 input functions                  ; 129                 ; 0                              ;
+;     -- Register only                        ; 71                  ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Logic elements by mode                      ;                     ;                                ;
-;     -- normal mode                          ; 156                 ; 0                              ;
+;     -- normal mode                          ; 172                 ; 0                              ;
 ;     -- arithmetic mode                      ; 158                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Total registers                             ; 205                 ; 0                              ;
 ;     -- Dedicated logic registers            ; 205 / 10320 ( 2 % ) ; 0 / 10320 ( 0 % )              ;
 ;     -- I/O registers                        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
-; Total LABs:  partially or completely used   ; 30 / 645 ( 5 % )    ; 0 / 645 ( 0 % )                ;
+; Total LABs:  partially or completely used   ; 34 / 645 ( 5 % )    ; 0 / 645 ( 0 % )                ;
 ;                                             ;                     ;                                ;
 ; Virtual pins                                ; 0                   ; 0                              ;
 ; I/O pins                                    ; 9                   ; 0                              ;
@@ -305,7 +305,7 @@ The pin-out file can be found in D:/Repos/FireWild/08_counter_myBoard/quartus_pr
 ; Total memory bits                           ; 0                   ; 0                              ;
 ; Total RAM block bits                        ; 0                   ; 0                              ;
 ; PLL                                         ; 0 / 2 ( 0 % )       ; 1 / 2 ( 50 % )                 ;
-; Clock control block                         ; 2 / 12 ( 16 % )     ; 1 / 12 ( 8 % )                 ;
+; Clock control block                         ; 3 / 12 ( 25 % )     ; 1 / 12 ( 8 % )                 ;
 ;                                             ;                     ;                                ;
 ; Connections                                 ;                     ;                                ;
 ;     -- Input Connections                    ; 27                  ; 1                              ;
@@ -314,8 +314,8 @@ The pin-out file can be found in D:/Repos/FireWild/08_counter_myBoard/quartus_pr
 ;     -- Registered Output Connections        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Internal Connections                        ;                     ;                                ;
-;     -- Total Connections                    ; 1741                ; 34                             ;
-;     -- Registered Connections               ; 530                 ; 0                              ;
+;     -- Total Connections                    ; 1868                ; 34                             ;
+;     -- Registered Connections               ; 588                 ; 0                              ;
 ;                                             ;                     ;                                ;
 ; External Connections                        ;                     ;                                ;
 ;     -- Top                                  ; 0                   ; 28                             ;
@@ -350,7 +350,7 @@ The pin-out file can be found in D:/Repos/FireWild/08_counter_myBoard/quartus_pr
 ; key[0]    ; L12   ; 5        ; 34           ; 3            ; 21           ; 21                    ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; key[1]    ; L13   ; 5        ; 34           ; 8            ; 21           ; 0                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; rx        ; L2    ; 2        ; 0            ; 8            ; 14           ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
-; sys_clk   ; E1    ; 1        ; 0            ; 11           ; 7            ; 179                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
+; sys_clk   ; E1    ; 1        ; 0            ; 11           ; 7            ; 70                    ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 ; sys_rst_n ; M15   ; 5        ; 34           ; 12           ; 14           ; 205                   ; 0                  ; yes    ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; --                        ; User                 ;
 +-----------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+---------------------------+----------------------+
 
@@ -726,14 +726,14 @@ Note: Pin directions (input, output or bidir) are based on device operating in u
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                                                                                                                  ; Library Name ;
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_functionGenerate                       ; 372 (104)   ; 205 (111)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 9    ; 0            ; 167 (9)      ; 58 (39)           ; 147 (57)         ; |top_functionGenerate                                                                                                                ; work         ;
-;    |functionGenerate:functionGenerate_inst| ; 186 (186)   ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 140 (140)    ; 0 (0)             ; 46 (46)          ; |top_functionGenerate|functionGenerate:functionGenerate_inst                                                                         ; work         ;
+; |top_functionGenerate                       ; 401 (127)   ; 205 (111)                 ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 9    ; 0            ; 196 (20)     ; 71 (49)           ; 134 (58)         ; |top_functionGenerate                                                                                                                ; work         ;
+;    |functionGenerate:functionGenerate_inst| ; 190 (190)   ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 157 (157)    ; 1 (1)             ; 32 (32)          ; |top_functionGenerate|functionGenerate:functionGenerate_inst                                                                         ; work         ;
 ;       |ipcore:pll_ip_inst|                  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst                                                      ; work         ;
 ;          |altpll:altpll_component|          ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component                              ; work         ;
 ;             |ipcore_altpll:auto_generated|  ; 0 (0)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 0 (0)            ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component|ipcore_altpll:auto_generated ; work         ;
 ;    |key_control:key_control_inst|           ; 31 (3)      ; 24 (3)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (0)        ; 2 (2)             ; 22 (1)           ; |top_functionGenerate|key_control:key_control_inst                                                                                   ; work         ;
 ;       |key_filter:key_filter_inst0|         ; 28 (28)     ; 21 (21)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 21 (21)          ; |top_functionGenerate|key_control:key_control_inst|key_filter:key_filter_inst0                                                       ; work         ;
-;    |uart_rx:uart_rx_inst|                   ; 52 (52)     ; 41 (41)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 11 (11)      ; 17 (17)           ; 24 (24)          ; |top_functionGenerate|uart_rx:uart_rx_inst                                                                                           ; work         ;
+;    |uart_rx:uart_rx_inst|                   ; 53 (53)     ; 41 (41)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 19 (19)           ; 22 (22)          ; |top_functionGenerate|uart_rx:uart_rx_inst                                                                                           ; work         ;
 +---------------------------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -790,41 +790,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +------------------------------------------------------------------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                                                                                                                             ;
-+---------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                                                                                                                            ; Location          ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Decoder0~0                                                                                                                      ; LCCOMB_X14_Y8_N2  ; 56      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Decoder0~2                                                                                                                      ; LCCOMB_X14_Y8_N6  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Decoder0~3                                                                                                                      ; LCCOMB_X14_Y8_N12 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Decoder0~4                                                                                                                      ; LCCOMB_X14_Y8_N30 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Decoder0~5                                                                                                                      ; LCCOMB_X14_Y8_N4  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Decoder0~6                                                                                                                      ; LCCOMB_X14_Y8_N18 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Decoder0~7                                                                                                                      ; LCCOMB_X14_Y8_N8  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component|ipcore_altpll:auto_generated|wire_pll1_clk[0] ; PLL_1             ; 27      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; functionGenerate:functionGenerate_inst|pulse_en                                                                                 ; LCCOMB_X12_Y10_N4 ; 25      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; key[0]                                                                                                                          ; PIN_L12           ; 21      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; key_control:key_control_inst|key_filter:key_filter_inst0|always0~0                                                              ; LCCOMB_X22_Y9_N22 ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; sys_clk                                                                                                                         ; PIN_E1            ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; sys_clk                                                                                                                         ; PIN_E1            ; 178     ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
-; sys_rst_n                                                                                                                       ; PIN_M15           ; 204     ; Async. clear ; yes    ; Global Clock         ; GCLK9            ; --                        ;
-; uart_rx:uart_rx_inst|always5~0                                                                                                  ; LCCOMB_X13_Y9_N14 ; 13      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; uart_rx:uart_rx_inst|always8~0                                                                                                  ; LCCOMB_X13_Y9_N18 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; uart_rx:uart_rx_inst|po_flag                                                                                                    ; FF_X13_Y9_N15     ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; uart_rx:uart_rx_inst|rx_flag                                                                                                    ; FF_X13_Y9_N27     ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-+---------------------------------------------------------------------------------------------------------------------------------+-------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                                                                                                              ;
++---------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                                                                                                                            ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Decoder0~0                                                                                                                      ; LCCOMB_X23_Y15_N6  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Decoder0~1                                                                                                                      ; LCCOMB_X24_Y14_N26 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Decoder0~2                                                                                                                      ; LCCOMB_X24_Y14_N24 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Decoder0~3                                                                                                                      ; LCCOMB_X24_Y14_N6  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Decoder0~4                                                                                                                      ; LCCOMB_X23_Y14_N16 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Decoder0~5                                                                                                                      ; LCCOMB_X24_Y14_N4  ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Equal0~0                                                                                                                        ; LCCOMB_X24_Y14_N28 ; 57      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component|ipcore_altpll:auto_generated|wire_pll1_clk[0] ; PLL_1              ; 27      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; functionGenerate:functionGenerate_inst|pulse_en                                                                                 ; LCCOMB_X19_Y14_N2  ; 26      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; key[0]                                                                                                                          ; PIN_L12            ; 21      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; key_control:key_control_inst|key_filter:key_filter_inst0|always0~0                                                              ; LCCOMB_X29_Y12_N28 ; 20      ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; sys_clk                                                                                                                         ; PIN_E1             ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; sys_clk                                                                                                                         ; PIN_E1             ; 69      ; Clock        ; yes    ; Global Clock         ; GCLK2            ; --                        ;
+; sys_rst_n                                                                                                                       ; PIN_M15            ; 205     ; Async. clear ; yes    ; Global Clock         ; GCLK9            ; --                        ;
+; uart_rx:uart_rx_inst|always5~0                                                                                                  ; LCCOMB_X11_Y17_N12 ; 13      ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; uart_rx:uart_rx_inst|always8~0                                                                                                  ; LCCOMB_X12_Y17_N28 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; uart_rx:uart_rx_inst|po_flag                                                                                                    ; FF_X33_Y12_N17     ; 109     ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; uart_rx:uart_rx_inst|rx_flag                                                                                                    ; FF_X12_Y17_N17     ; 9       ; Clock enable ; no     ; --                   ; --               ; --                        ;
++---------------------------------------------------------------------------------------------------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Global & Other Fast Signals                                                                                                                                                                                                                                       ;
-+---------------------------------------------------------------------------------------------------------------------------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; Name                                                                                                                            ; Location ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+---------------------------------------------------------------------------------------------------------------------------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
-; functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component|ipcore_altpll:auto_generated|wire_pll1_clk[0] ; PLL_1    ; 27      ; 2                                    ; Global Clock         ; GCLK3            ; --                        ;
-; sys_clk                                                                                                                         ; PIN_E1   ; 178     ; 3                                    ; Global Clock         ; GCLK2            ; --                        ;
-; sys_rst_n                                                                                                                       ; PIN_M15  ; 204     ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
-+---------------------------------------------------------------------------------------------------------------------------------+----------+---------+--------------------------------------+----------------------+------------------+---------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Global & Other Fast Signals                                                                                                                                                                                                                                             ;
++---------------------------------------------------------------------------------------------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; Name                                                                                                                            ; Location       ; Fan-Out ; Fan-Out Using Intentional Clock Skew ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++---------------------------------------------------------------------------------------------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
+; functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component|ipcore_altpll:auto_generated|wire_pll1_clk[0] ; PLL_1          ; 27      ; 2                                    ; Global Clock         ; GCLK3            ; --                        ;
+; sys_clk                                                                                                                         ; PIN_E1         ; 69      ; 0                                    ; Global Clock         ; GCLK2            ; --                        ;
+; sys_rst_n                                                                                                                       ; PIN_M15        ; 205     ; 0                                    ; Global Clock         ; GCLK9            ; --                        ;
+; uart_rx:uart_rx_inst|po_flag                                                                                                    ; FF_X33_Y12_N17 ; 109     ; 22                                   ; Global Clock         ; GCLK5            ; --                        ;
++---------------------------------------------------------------------------------------------------------------------------------+----------------+---------+--------------------------------------+----------------------+------------------+---------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------+
@@ -832,24 +833,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------------------------------------------------+---------+
 ; Name                                                                                                                           ; Fan-Out ;
 +--------------------------------------------------------------------------------------------------------------------------------+---------+
-; Decoder0~0                                                                                                                     ; 56      ;
+; Equal0~0                                                                                                                       ; 57      ;
 ; Equal1~1                                                                                                                       ; 49      ;
 ; Equal1~0                                                                                                                       ; 49      ;
-; functionGenerate:functionGenerate_inst|pulse_en                                                                                ; 25      ;
+; functionGenerate:functionGenerate_inst|pulse_en                                                                                ; 26      ;
 ; key[0]~input                                                                                                                   ; 21      ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|always0~0                                                             ; 20      ;
 ; uart_rx:uart_rx_inst|always5~0                                                                                                 ; 13      ;
+; LessThan2~4                                                                                                                    ; 13      ;
+; LessThan1~4                                                                                                                    ; 13      ;
+; LessThan0~4                                                                                                                    ; 13      ;
 ; rec_byte_cnt[0]                                                                                                                ; 11      ;
 ; rec_byte_cnt[1]                                                                                                                ; 11      ;
 ; rec_byte_cnt[2]                                                                                                                ; 10      ;
 ; uart_rx:uart_rx_inst|rx_flag                                                                                                   ; 9       ;
+; rec_byte_cnt[3]                                                                                                                ; 9       ;
 ; uart_rx:uart_rx_inst|always8~0                                                                                                 ; 8       ;
-; Decoder0~7                                                                                                                     ; 8       ;
-; Decoder0~6                                                                                                                     ; 8       ;
 ; Decoder0~5                                                                                                                     ; 8       ;
 ; Decoder0~4                                                                                                                     ; 8       ;
 ; Decoder0~3                                                                                                                     ; 8       ;
 ; Decoder0~2                                                                                                                     ; 8       ;
+; Decoder0~1                                                                                                                     ; 8       ;
+; Decoder0~0                                                                                                                     ; 8       ;
 ; uart_rx:uart_rx_inst|po_data[3]                                                                                                ; 7       ;
 ; uart_rx:uart_rx_inst|po_data[0]                                                                                                ; 7       ;
 ; uart_rx:uart_rx_inst|po_data[1]                                                                                                ; 7       ;
@@ -858,11 +863,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart_rx:uart_rx_inst|po_data[5]                                                                                                ; 7       ;
 ; uart_rx:uart_rx_inst|po_data[6]                                                                                                ; 7       ;
 ; uart_rx:uart_rx_inst|po_data[7]                                                                                                ; 7       ;
-; uart_rx:uart_rx_inst|po_flag                                                                                                   ; 7       ;
-; Decoder0~1                                                                                                                     ; 6       ;
 ; uart_rx:uart_rx_inst|bit_flag                                                                                                  ; 5       ;
 ; uart_rx:uart_rx_inst|bit_cnt[3]                                                                                                ; 5       ;
-; functionGenerate:functionGenerate_inst|pulse_out1                                                                              ; 5       ;
+; functionGenerate:functionGenerate_inst|pulse_flag.01                                                                           ; 5       ;
 ; functionGenerate:functionGenerate_inst|cnt[15]                                                                                 ; 5       ;
 ; functionGenerate:functionGenerate_inst|cnt[14]                                                                                 ; 5       ;
 ; functionGenerate:functionGenerate_inst|cnt[13]                                                                                 ; 5       ;
@@ -873,38 +876,36 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; functionGenerate:functionGenerate_inst|cnt[8]                                                                                  ; 5       ;
 ; functionGenerate:functionGenerate_inst|cnt[7]                                                                                  ; 5       ;
 ; functionGenerate:functionGenerate_inst|cnt[6]                                                                                  ; 5       ;
+; functionGenerate:functionGenerate_inst|cnt[1]                                                                                  ; 5       ;
+; functionGenerate:functionGenerate_inst|cnt[0]                                                                                  ; 5       ;
 ; functionGenerate:functionGenerate_inst|cnt[5]                                                                                  ; 5       ;
 ; functionGenerate:functionGenerate_inst|cnt[4]                                                                                  ; 5       ;
 ; functionGenerate:functionGenerate_inst|cnt[3]                                                                                  ; 5       ;
 ; functionGenerate:functionGenerate_inst|cnt[2]                                                                                  ; 5       ;
-; functionGenerate:functionGenerate_inst|cnt[1]                                                                                  ; 5       ;
-; functionGenerate:functionGenerate_inst|cnt[0]                                                                                  ; 5       ;
 ; uart_rx:uart_rx_inst|always4~0                                                                                                 ; 4       ;
-; rec_byte_cnt[3]                                                                                                                ; 4       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01                                                                           ; 4       ;
 ; functionGenerate:functionGenerate_inst|cnt[17]                                                                                 ; 4       ;
 ; functionGenerate:functionGenerate_inst|cnt[16]                                                                                 ; 4       ;
 ; uart_rx:uart_rx_inst|work_en                                                                                                   ; 3       ;
-; functionGenerate:functionGenerate_inst|Equal1~10                                                                               ; 3       ;
-; functionGenerate:functionGenerate_inst|always2~9                                                                               ; 3       ;
-; functionGenerate:functionGenerate_inst|po_flag_dly1                                                                            ; 3       ;
-; functionGenerate:functionGenerate_inst|always2~2                                                                               ; 3       ;
+; functionGenerate:functionGenerate_inst|always2~21                                                                              ; 3       ;
+; pulse_width[0][12]                                                                                                             ; 3       ;
+; pulse_width[0][13]                                                                                                             ; 3       ;
+; pulse_width[0][14]                                                                                                             ; 3       ;
+; pulse_width[0][15]                                                                                                             ; 3       ;
+; pulse_width[0][10]                                                                                                             ; 3       ;
+; pulse_width[0][11]                                                                                                             ; 3       ;
+; pulse_width[0][8]                                                                                                              ; 3       ;
+; pulse_width[0][9]                                                                                                              ; 3       ;
+; pulse_width[0][6]                                                                                                              ; 3       ;
+; pulse_width[0][7]                                                                                                              ; 3       ;
 ; pulse_width[0][0]                                                                                                              ; 3       ;
 ; pulse_width[0][1]                                                                                                              ; 3       ;
 ; pulse_width[0][2]                                                                                                              ; 3       ;
 ; pulse_width[0][3]                                                                                                              ; 3       ;
 ; pulse_width[0][4]                                                                                                              ; 3       ;
 ; pulse_width[0][5]                                                                                                              ; 3       ;
-; pulse_width[0][6]                                                                                                              ; 3       ;
-; pulse_width[0][7]                                                                                                              ; 3       ;
-; pulse_width[0][8]                                                                                                              ; 3       ;
-; pulse_width[0][9]                                                                                                              ; 3       ;
-; pulse_width[0][10]                                                                                                             ; 3       ;
-; pulse_width[0][11]                                                                                                             ; 3       ;
-; pulse_width[0][12]                                                                                                             ; 3       ;
-; pulse_width[0][13]                                                                                                             ; 3       ;
-; pulse_width[0][14]                                                                                                             ; 3       ;
-; pulse_width[0][15]                                                                                                             ; 3       ;
+; functionGenerate:functionGenerate_inst|always2~2                                                                               ; 3       ;
+; functionGenerate:functionGenerate_inst|pulse_out1                                                                              ; 3       ;
+; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[0]                                                           ; 3       ;
 ; uart_rx:uart_rx_inst|baud_cnt[12]                                                                                              ; 3       ;
 ; uart_rx:uart_rx_inst|baud_cnt[10]                                                                                              ; 3       ;
 ; uart_rx:uart_rx_inst|baud_cnt[6]                                                                                               ; 3       ;
@@ -914,15 +915,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart_rx:uart_rx_inst|baud_cnt[2]                                                                                               ; 3       ;
 ; uart_rx:uart_rx_inst|baud_cnt[5]                                                                                               ; 3       ;
 ; uart_rx:uart_rx_inst|baud_cnt[3]                                                                                               ; 3       ;
-; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[0]                                                           ; 3       ;
 ; uart_rx:uart_rx_inst|rx_reg2                                                                                                   ; 2       ;
-; uart_rx:uart_rx_inst|Equal1~0                                                                                                  ; 2       ;
-; uart_rx:uart_rx_inst|rx_reg3                                                                                                   ; 2       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|Equal1~5                                                              ; 2       ;
-; uart_rx:uart_rx_inst|always4~1                                                                                                 ; 2       ;
-; uart_rx:uart_rx_inst|bit_cnt[0]                                                                                                ; 2       ;
-; uart_rx:uart_rx_inst|bit_cnt[1]                                                                                                ; 2       ;
-; uart_rx:uart_rx_inst|bit_cnt[2]                                                                                                ; 2       ;
+; uart_rx:uart_rx_inst|rx_reg3                                                                                                   ; 2       ;
+; uart_rx:uart_rx_inst|Equal1~0                                                                                                  ; 2       ;
 ; uart_rx:uart_rx_inst|rx_data[3]                                                                                                ; 2       ;
 ; uart_rx:uart_rx_inst|rx_data[1]                                                                                                ; 2       ;
 ; uart_rx:uart_rx_inst|rx_data[2]                                                                                                ; 2       ;
@@ -931,38 +927,97 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; uart_rx:uart_rx_inst|rx_data[6]                                                                                                ; 2       ;
 ; uart_rx:uart_rx_inst|rx_data[7]                                                                                                ; 2       ;
 ; key_control:key_control_inst|key_flag_dly1                                                                                     ; 2       ;
-; Equal0~0                                                                                                                       ; 2       ;
-; key_control:key_control_inst|key_en                                                                                            ; 2       ;
-; uart_en                                                                                                                        ; 2       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~11                                                                        ; 2       ;
-; functionGenerate:functionGenerate_inst|Equal3~10                                                                               ; 2       ;
-; functionGenerate:functionGenerate_inst|Equal3~5                                                                                ; 2       ;
-; functionGenerate:functionGenerate_inst|Equal3~2                                                                                ; 2       ;
-; functionGenerate:functionGenerate_inst|Equal3~1                                                                                ; 2       ;
-; functionGenerate:functionGenerate_inst|po_flag_dly2                                                                            ; 2       ;
-; functionGenerate:functionGenerate_inst|always2~3                                                                               ; 2       ;
-; functionGenerate:functionGenerate_inst|Equal3~0                                                                                ; 2       ;
+; uart_rx:uart_rx_inst|always4~1                                                                                                 ; 2       ;
+; uart_rx:uart_rx_inst|bit_cnt[0]                                                                                                ; 2       ;
+; uart_rx:uart_rx_inst|bit_cnt[1]                                                                                                ; 2       ;
+; uart_rx:uart_rx_inst|bit_cnt[2]                                                                                                ; 2       ;
+; rx_data[7][0]                                                                                                                  ; 2       ;
+; rx_data[7][1]                                                                                                                  ; 2       ;
+; rx_data[7][2]                                                                                                                  ; 2       ;
+; rx_data[7][3]                                                                                                                  ; 2       ;
+; rx_data[7][4]                                                                                                                  ; 2       ;
+; rx_data[7][5]                                                                                                                  ; 2       ;
+; rx_data[7][6]                                                                                                                  ; 2       ;
+; rx_data[7][7]                                                                                                                  ; 2       ;
+; rx_data[8][3]                                                                                                                  ; 2       ;
+; rx_data[8][4]                                                                                                                  ; 2       ;
+; rx_data[8][6]                                                                                                                  ; 2       ;
+; rx_data[8][1]                                                                                                                  ; 2       ;
+; rx_data[8][0]                                                                                                                  ; 2       ;
+; rx_data[8][2]                                                                                                                  ; 2       ;
+; rx_data[8][7]                                                                                                                  ; 2       ;
+; rx_data[8][5]                                                                                                                  ; 2       ;
+; rx_data[5][0]                                                                                                                  ; 2       ;
+; rx_data[5][1]                                                                                                                  ; 2       ;
+; rx_data[5][2]                                                                                                                  ; 2       ;
+; rx_data[5][3]                                                                                                                  ; 2       ;
+; rx_data[5][4]                                                                                                                  ; 2       ;
+; rx_data[5][5]                                                                                                                  ; 2       ;
+; rx_data[5][6]                                                                                                                  ; 2       ;
+; rx_data[5][7]                                                                                                                  ; 2       ;
+; rx_data[6][3]                                                                                                                  ; 2       ;
+; rx_data[6][4]                                                                                                                  ; 2       ;
+; rx_data[6][6]                                                                                                                  ; 2       ;
+; rx_data[6][0]                                                                                                                  ; 2       ;
+; rx_data[6][1]                                                                                                                  ; 2       ;
+; rx_data[6][2]                                                                                                                  ; 2       ;
+; rx_data[6][7]                                                                                                                  ; 2       ;
+; rx_data[6][5]                                                                                                                  ; 2       ;
+; rx_data[3][0]                                                                                                                  ; 2       ;
+; rx_data[3][1]                                                                                                                  ; 2       ;
+; rx_data[3][2]                                                                                                                  ; 2       ;
+; rx_data[3][3]                                                                                                                  ; 2       ;
+; rx_data[3][4]                                                                                                                  ; 2       ;
+; rx_data[3][5]                                                                                                                  ; 2       ;
+; rx_data[3][6]                                                                                                                  ; 2       ;
+; rx_data[3][7]                                                                                                                  ; 2       ;
+; rx_data[4][3]                                                                                                                  ; 2       ;
+; rx_data[4][4]                                                                                                                  ; 2       ;
+; rx_data[4][6]                                                                                                                  ; 2       ;
+; rx_data[4][1]                                                                                                                  ; 2       ;
+; rx_data[4][0]                                                                                                                  ; 2       ;
+; rx_data[4][2]                                                                                                                  ; 2       ;
+; rx_data[4][7]                                                                                                                  ; 2       ;
+; rx_data[4][5]                                                                                                                  ; 2       ;
+; functionGenerate:functionGenerate_inst|LessThan0~4                                                                             ; 2       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~19                                                                           ; 2       ;
+; functionGenerate:functionGenerate_inst|pulse_out1~0                                                                            ; 2       ;
+; functionGenerate:functionGenerate_inst|Equal3~12                                                                               ; 2       ;
+; pulse_gap[12]                                                                                                                  ; 2       ;
+; pulse_gap[13]                                                                                                                  ; 2       ;
+; pulse_gap[14]                                                                                                                  ; 2       ;
+; pulse_gap[15]                                                                                                                  ; 2       ;
+; pulse_width[1][12]                                                                                                             ; 2       ;
+; pulse_width[1][13]                                                                                                             ; 2       ;
+; pulse_width[1][14]                                                                                                             ; 2       ;
+; pulse_width[1][15]                                                                                                             ; 2       ;
+; pulse_gap[10]                                                                                                                  ; 2       ;
+; pulse_gap[11]                                                                                                                  ; 2       ;
+; pulse_width[1][10]                                                                                                             ; 2       ;
+; pulse_width[1][11]                                                                                                             ; 2       ;
+; pulse_gap[8]                                                                                                                   ; 2       ;
+; pulse_gap[9]                                                                                                                   ; 2       ;
+; pulse_width[1][8]                                                                                                              ; 2       ;
+; pulse_width[1][9]                                                                                                              ; 2       ;
+; pulse_gap[6]                                                                                                                   ; 2       ;
+; pulse_gap[7]                                                                                                                   ; 2       ;
+; pulse_width[1][6]                                                                                                              ; 2       ;
+; pulse_width[1][7]                                                                                                              ; 2       ;
 ; pulse_gap[0]                                                                                                                   ; 2       ;
 ; pulse_gap[1]                                                                                                                   ; 2       ;
 ; pulse_gap[2]                                                                                                                   ; 2       ;
 ; pulse_gap[3]                                                                                                                   ; 2       ;
 ; pulse_gap[4]                                                                                                                   ; 2       ;
 ; pulse_gap[5]                                                                                                                   ; 2       ;
-; pulse_gap[6]                                                                                                                   ; 2       ;
-; pulse_gap[7]                                                                                                                   ; 2       ;
-; pulse_gap[8]                                                                                                                   ; 2       ;
-; pulse_gap[9]                                                                                                                   ; 2       ;
-; pulse_gap[10]                                                                                                                  ; 2       ;
-; pulse_gap[11]                                                                                                                  ; 2       ;
-; pulse_gap[12]                                                                                                                  ; 2       ;
-; pulse_gap[13]                                                                                                                  ; 2       ;
-; pulse_gap[14]                                                                                                                  ; 2       ;
-; pulse_gap[15]                                                                                                                  ; 2       ;
-; led_reg[0]                                                                                                                     ; 2       ;
-; uart_rx:uart_rx_inst|baud_cnt[8]                                                                                               ; 2       ;
-; uart_rx:uart_rx_inst|baud_cnt[7]                                                                                               ; 2       ;
-; uart_rx:uart_rx_inst|baud_cnt[1]                                                                                               ; 2       ;
-; uart_rx:uart_rx_inst|baud_cnt[0]                                                                                               ; 2       ;
+; pulse_width[1][0]                                                                                                              ; 2       ;
+; pulse_width[1][1]                                                                                                              ; 2       ;
+; pulse_width[1][2]                                                                                                              ; 2       ;
+; pulse_width[1][3]                                                                                                              ; 2       ;
+; pulse_width[1][4]                                                                                                              ; 2       ;
+; pulse_width[1][5]                                                                                                              ; 2       ;
+; functionGenerate:functionGenerate_inst|always2~9                                                                               ; 2       ;
+; functionGenerate:functionGenerate_inst|po_flag_dly1                                                                            ; 2       ;
+; functionGenerate:functionGenerate_inst|always2~3                                                                               ; 2       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[15]                                                          ; 2       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[13]                                                          ; 2       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[16]                                                          ; 2       ;
@@ -982,7 +1037,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[19]                                                          ; 2       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[18]                                                          ; 2       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[17]                                                          ; 2       ;
-; functionGenerate:functionGenerate_inst|Add6~36                                                                                 ; 2       ;
+; uart_rx:uart_rx_inst|baud_cnt[8]                                                                                               ; 2       ;
+; uart_rx:uart_rx_inst|baud_cnt[7]                                                                                               ; 2       ;
+; uart_rx:uart_rx_inst|baud_cnt[1]                                                                                               ; 2       ;
+; uart_rx:uart_rx_inst|baud_cnt[0]                                                                                               ; 2       ;
 ; functionGenerate:functionGenerate_inst|cnt[24]                                                                                 ; 2       ;
 ; functionGenerate:functionGenerate_inst|cnt[23]                                                                                 ; 2       ;
 ; functionGenerate:functionGenerate_inst|cnt[22]                                                                                 ; 2       ;
@@ -992,137 +1050,100 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; functionGenerate:functionGenerate_inst|cnt[18]                                                                                 ; 2       ;
 ; rx~input                                                                                                                       ; 1       ;
 ; sys_clk~input                                                                                                                  ; 1       ;
-; sys_rst_n~input                                                                                                                ; 1       ;
 ; uart_rx:uart_rx_inst|rx_reg1~0                                                                                                 ; 1       ;
 ; uart_rx:uart_rx_inst|rx_data[7]~0                                                                                              ; 1       ;
 ; uart_rx:uart_rx_inst|always3~0                                                                                                 ; 1       ;
+; uart_rx:uart_rx_inst|rx_reg1                                                                                                   ; 1       ;
 ; uart_rx:uart_rx_inst|work_en~0                                                                                                 ; 1       ;
 ; uart_rx:uart_rx_inst|start_nedge                                                                                               ; 1       ;
-; uart_rx:uart_rx_inst|rx_reg1                                                                                                   ; 1       ;
-; uart_rx:uart_rx_inst|Equal1~3                                                                                                  ; 1       ;
-; uart_rx:uart_rx_inst|Equal1~2                                                                                                  ; 1       ;
-; uart_rx:uart_rx_inst|Equal1~1                                                                                                  ; 1       ;
-; uart_rx:uart_rx_inst|bit_cnt~1                                                                                                 ; 1       ;
-; uart_rx:uart_rx_inst|Equal2~2                                                                                                  ; 1       ;
-; uart_rx:uart_rx_inst|Equal2~1                                                                                                  ; 1       ;
-; uart_rx:uart_rx_inst|Equal2~0                                                                                                  ; 1       ;
-; uart_rx:uart_rx_inst|bit_cnt~0                                                                                                 ; 1       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|Equal1~6                                                              ; 1       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|Equal1~4                                                              ; 1       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|Equal1~3                                                              ; 1       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|Equal1~2                                                              ; 1       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|Equal1~1                                                              ; 1       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|Equal1~0                                                              ; 1       ;
-; uart_rx:uart_rx_inst|rx_data[0]                                                                                                ; 1       ;
+; uart_rx:uart_rx_inst|Equal1~3                                                                                                  ; 1       ;
+; uart_rx:uart_rx_inst|Equal1~2                                                                                                  ; 1       ;
+; uart_rx:uart_rx_inst|Equal1~1                                                                                                  ; 1       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|key_flag                                                              ; 1       ;
-; always0~0                                                                                                                      ; 1       ;
+; uart_rx:uart_rx_inst|bit_cnt~1                                                                                                 ; 1       ;
+; uart_rx:uart_rx_inst|Equal2~2                                                                                                  ; 1       ;
+; uart_rx:uart_rx_inst|Equal2~1                                                                                                  ; 1       ;
+; uart_rx:uart_rx_inst|Equal2~0                                                                                                  ; 1       ;
+; uart_rx:uart_rx_inst|bit_cnt~0                                                                                                 ; 1       ;
+; uart_rx:uart_rx_inst|rx_data[0]                                                                                                ; 1       ;
+; key_control:key_control_inst|key_trigger_en                                                                                    ; 1       ;
+; key_control:key_control_inst|key_flag_dly2                                                                                     ; 1       ;
+; uart_en~0                                                                                                                      ; 1       ;
 ; rec_byte_cnt~3                                                                                                                 ; 1       ;
 ; rec_byte_cnt[1]~2                                                                                                              ; 1       ;
 ; rec_byte_cnt[2]~1                                                                                                              ; 1       ;
 ; rec_byte_cnt~0                                                                                                                 ; 1       ;
-; key_control:key_control_inst|key_trigger_en                                                                                    ; 1       ;
-; key_control:key_control_inst|key_flag_dly2                                                                                     ; 1       ;
-; uart_en~0                                                                                                                      ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~14                                                                        ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~13                                                                        ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~12                                                                        ; 1       ;
-; enable_Pulse                                                                                                                   ; 1       ;
+; always1~0                                                                                                                      ; 1       ;
+; key_control:key_control_inst|key_en                                                                                            ; 1       ;
+; uart_en                                                                                                                        ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~21                                                                           ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~20                                                                           ; 1       ;
 ; pulse_gap~15                                                                                                                   ; 1       ;
-; rx_data[8][0]                                                                                                                  ; 1       ;
 ; pulse_gap~14                                                                                                                   ; 1       ;
-; rx_data[8][1]                                                                                                                  ; 1       ;
 ; pulse_gap~13                                                                                                                   ; 1       ;
-; rx_data[8][2]                                                                                                                  ; 1       ;
 ; pulse_gap~12                                                                                                                   ; 1       ;
-; rx_data[8][3]                                                                                                                  ; 1       ;
-; pulse_gap~11                                                                                                                   ; 1       ;
-; rx_data[8][4]                                                                                                                  ; 1       ;
-; pulse_gap~10                                                                                                                   ; 1       ;
-; rx_data[8][5]                                                                                                                  ; 1       ;
-; pulse_gap~9                                                                                                                    ; 1       ;
-; rx_data[8][6]                                                                                                                  ; 1       ;
-; pulse_gap~8                                                                                                                    ; 1       ;
-; rx_data[8][7]                                                                                                                  ; 1       ;
-; pulse_gap~7                                                                                                                    ; 1       ;
-; rx_data[7][0]                                                                                                                  ; 1       ;
-; pulse_gap~6                                                                                                                    ; 1       ;
-; rx_data[7][1]                                                                                                                  ; 1       ;
-; pulse_gap~5                                                                                                                    ; 1       ;
-; rx_data[7][2]                                                                                                                  ; 1       ;
-; pulse_gap~4                                                                                                                    ; 1       ;
-; rx_data[7][3]                                                                                                                  ; 1       ;
-; pulse_gap~3                                                                                                                    ; 1       ;
-; rx_data[7][4]                                                                                                                  ; 1       ;
-; pulse_gap~2                                                                                                                    ; 1       ;
-; rx_data[7][5]                                                                                                                  ; 1       ;
-; pulse_gap~1                                                                                                                    ; 1       ;
-; rx_data[7][6]                                                                                                                  ; 1       ;
-; pulse_gap~0                                                                                                                    ; 1       ;
-; rx_data[7][7]                                                                                                                  ; 1       ;
 ; pulse_width~31                                                                                                                 ; 1       ;
-; rx_data[6][0]                                                                                                                  ; 1       ;
 ; pulse_width~30                                                                                                                 ; 1       ;
-; rx_data[4][0]                                                                                                                  ; 1       ;
 ; pulse_width~29                                                                                                                 ; 1       ;
-; rx_data[6][1]                                                                                                                  ; 1       ;
 ; pulse_width~28                                                                                                                 ; 1       ;
-; rx_data[4][1]                                                                                                                  ; 1       ;
 ; pulse_width~27                                                                                                                 ; 1       ;
-; rx_data[6][2]                                                                                                                  ; 1       ;
 ; pulse_width~26                                                                                                                 ; 1       ;
-; rx_data[4][2]                                                                                                                  ; 1       ;
 ; pulse_width~25                                                                                                                 ; 1       ;
-; rx_data[6][3]                                                                                                                  ; 1       ;
 ; pulse_width~24                                                                                                                 ; 1       ;
-; rx_data[4][3]                                                                                                                  ; 1       ;
+; pulse_gap~11                                                                                                                   ; 1       ;
+; pulse_gap~10                                                                                                                   ; 1       ;
 ; pulse_width~23                                                                                                                 ; 1       ;
-; rx_data[6][4]                                                                                                                  ; 1       ;
 ; pulse_width~22                                                                                                                 ; 1       ;
-; rx_data[4][4]                                                                                                                  ; 1       ;
 ; pulse_width~21                                                                                                                 ; 1       ;
-; rx_data[6][5]                                                                                                                  ; 1       ;
 ; pulse_width~20                                                                                                                 ; 1       ;
-; rx_data[4][5]                                                                                                                  ; 1       ;
+; pulse_gap~9                                                                                                                    ; 1       ;
+; pulse_gap~8                                                                                                                    ; 1       ;
 ; pulse_width~19                                                                                                                 ; 1       ;
-; rx_data[6][6]                                                                                                                  ; 1       ;
 ; pulse_width~18                                                                                                                 ; 1       ;
-; rx_data[4][6]                                                                                                                  ; 1       ;
 ; pulse_width~17                                                                                                                 ; 1       ;
-; rx_data[6][7]                                                                                                                  ; 1       ;
 ; pulse_width~16                                                                                                                 ; 1       ;
-; rx_data[4][7]                                                                                                                  ; 1       ;
+; pulse_gap~7                                                                                                                    ; 1       ;
+; pulse_gap~6                                                                                                                    ; 1       ;
 ; pulse_width~15                                                                                                                 ; 1       ;
-; rx_data[5][0]                                                                                                                  ; 1       ;
 ; pulse_width~14                                                                                                                 ; 1       ;
-; rx_data[3][0]                                                                                                                  ; 1       ;
 ; pulse_width~13                                                                                                                 ; 1       ;
-; rx_data[5][1]                                                                                                                  ; 1       ;
 ; pulse_width~12                                                                                                                 ; 1       ;
-; rx_data[3][1]                                                                                                                  ; 1       ;
+; pulse_gap~5                                                                                                                    ; 1       ;
+; pulse_gap~4                                                                                                                    ; 1       ;
+; pulse_gap~3                                                                                                                    ; 1       ;
+; pulse_gap~2                                                                                                                    ; 1       ;
+; pulse_gap~1                                                                                                                    ; 1       ;
+; pulse_gap~0                                                                                                                    ; 1       ;
+; LessThan2~3                                                                                                                    ; 1       ;
+; LessThan2~2                                                                                                                    ; 1       ;
+; LessThan2~1                                                                                                                    ; 1       ;
+; LessThan2~0                                                                                                                    ; 1       ;
 ; pulse_width~11                                                                                                                 ; 1       ;
-; rx_data[5][2]                                                                                                                  ; 1       ;
 ; pulse_width~10                                                                                                                 ; 1       ;
-; rx_data[3][2]                                                                                                                  ; 1       ;
 ; pulse_width~9                                                                                                                  ; 1       ;
-; rx_data[5][3]                                                                                                                  ; 1       ;
 ; pulse_width~8                                                                                                                  ; 1       ;
-; rx_data[3][3]                                                                                                                  ; 1       ;
 ; pulse_width~7                                                                                                                  ; 1       ;
-; rx_data[5][4]                                                                                                                  ; 1       ;
 ; pulse_width~6                                                                                                                  ; 1       ;
-; rx_data[3][4]                                                                                                                  ; 1       ;
 ; pulse_width~5                                                                                                                  ; 1       ;
-; rx_data[5][5]                                                                                                                  ; 1       ;
 ; pulse_width~4                                                                                                                  ; 1       ;
-; rx_data[3][5]                                                                                                                  ; 1       ;
 ; pulse_width~3                                                                                                                  ; 1       ;
-; rx_data[5][6]                                                                                                                  ; 1       ;
 ; pulse_width~2                                                                                                                  ; 1       ;
-; rx_data[3][6]                                                                                                                  ; 1       ;
 ; pulse_width~1                                                                                                                  ; 1       ;
-; rx_data[5][7]                                                                                                                  ; 1       ;
+; LessThan1~3                                                                                                                    ; 1       ;
+; LessThan1~2                                                                                                                    ; 1       ;
+; LessThan1~1                                                                                                                    ; 1       ;
+; LessThan1~0                                                                                                                    ; 1       ;
 ; pulse_width~0                                                                                                                  ; 1       ;
-; rx_data[3][7]                                                                                                                  ; 1       ;
+; LessThan0~3                                                                                                                    ; 1       ;
+; LessThan0~2                                                                                                                    ; 1       ;
+; LessThan0~1                                                                                                                    ; 1       ;
+; LessThan0~0                                                                                                                    ; 1       ;
 ; rx_data[0][3]                                                                                                                  ; 1       ;
 ; rx_data[0][0]                                                                                                                  ; 1       ;
 ; rx_data[0][1]                                                                                                                  ; 1       ;
@@ -1131,88 +1152,57 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; rx_data[0][5]                                                                                                                  ; 1       ;
 ; rx_data[0][6]                                                                                                                  ; 1       ;
 ; rx_data[0][7]                                                                                                                  ; 1       ;
-; led_reg[0]~0                                                                                                                   ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_out1~5                                                                            ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_out1~4                                                                            ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~10                                                                        ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~9                                                                         ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~8                                                                         ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~7                                                                         ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~6                                                                         ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~5                                                                         ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~4                                                                         ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~3                                                                         ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~2                                                                         ; 1       ;
-; functionGenerate:functionGenerate_inst|Equal2~0                                                                                ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~1                                                                         ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_flag.01~0                                                                         ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_out1~3                                                                            ; 1       ;
+; enable_Pulse                                                                                                                   ; 1       ;
+; uart_rx:uart_rx_inst|po_flag                                                                                                   ; 1       ;
 ; functionGenerate:functionGenerate_inst|pulse_out1~2                                                                            ; 1       ;
 ; functionGenerate:functionGenerate_inst|pulse_out1~1                                                                            ; 1       ;
+; functionGenerate:functionGenerate_inst|LessThan0~3                                                                             ; 1       ;
+; functionGenerate:functionGenerate_inst|LessThan0~2                                                                             ; 1       ;
+; functionGenerate:functionGenerate_inst|LessThan0~1                                                                             ; 1       ;
+; functionGenerate:functionGenerate_inst|LessThan0~0                                                                             ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~18                                                                           ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~17                                                                           ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~16                                                                           ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~15                                                                           ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~14                                                                           ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~13                                                                           ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~12                                                                           ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~11                                                                           ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~10                                                                           ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~9                                                                            ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~8                                                                            ; 1       ;
+; functionGenerate:functionGenerate_inst|pulse_flag~7                                                                            ; 1       ;
+; functionGenerate:functionGenerate_inst|always2~20                                                                              ; 1       ;
+; functionGenerate:functionGenerate_inst|always2~19                                                                              ; 1       ;
+; functionGenerate:functionGenerate_inst|always2~18                                                                              ; 1       ;
+; functionGenerate:functionGenerate_inst|always2~17                                                                              ; 1       ;
+; functionGenerate:functionGenerate_inst|always2~16                                                                              ; 1       ;
+; functionGenerate:functionGenerate_inst|always2~15                                                                              ; 1       ;
+; functionGenerate:functionGenerate_inst|always2~14                                                                              ; 1       ;
+; functionGenerate:functionGenerate_inst|always2~13                                                                              ; 1       ;
+; functionGenerate:functionGenerate_inst|always2~12                                                                              ; 1       ;
+; functionGenerate:functionGenerate_inst|always2~11                                                                              ; 1       ;
+; functionGenerate:functionGenerate_inst|always2~10                                                                              ; 1       ;
+; functionGenerate:functionGenerate_inst|Equal3~11                                                                               ; 1       ;
+; functionGenerate:functionGenerate_inst|Equal3~10                                                                               ; 1       ;
 ; functionGenerate:functionGenerate_inst|Equal3~9                                                                                ; 1       ;
 ; functionGenerate:functionGenerate_inst|Equal3~8                                                                                ; 1       ;
 ; functionGenerate:functionGenerate_inst|Equal3~7                                                                                ; 1       ;
 ; functionGenerate:functionGenerate_inst|Equal3~6                                                                                ; 1       ;
+; functionGenerate:functionGenerate_inst|Equal3~5                                                                                ; 1       ;
 ; functionGenerate:functionGenerate_inst|Equal3~4                                                                                ; 1       ;
 ; functionGenerate:functionGenerate_inst|Equal3~3                                                                                ; 1       ;
-; functionGenerate:functionGenerate_inst|pulse_out1~0                                                                            ; 1       ;
-; functionGenerate:functionGenerate_inst|Equal1~9                                                                                ; 1       ;
-; functionGenerate:functionGenerate_inst|Equal1~8                                                                                ; 1       ;
-; functionGenerate:functionGenerate_inst|Equal1~7                                                                                ; 1       ;
-; functionGenerate:functionGenerate_inst|Equal1~6                                                                                ; 1       ;
-; functionGenerate:functionGenerate_inst|Equal1~5                                                                                ; 1       ;
-; functionGenerate:functionGenerate_inst|Equal1~4                                                                                ; 1       ;
-; functionGenerate:functionGenerate_inst|Equal1~3                                                                                ; 1       ;
-; functionGenerate:functionGenerate_inst|Equal1~2                                                                                ; 1       ;
-; functionGenerate:functionGenerate_inst|Equal1~1                                                                                ; 1       ;
-; functionGenerate:functionGenerate_inst|Equal1~0                                                                                ; 1       ;
+; functionGenerate:functionGenerate_inst|Equal3~2                                                                                ; 1       ;
+; functionGenerate:functionGenerate_inst|Equal3~1                                                                                ; 1       ;
+; functionGenerate:functionGenerate_inst|Equal3~0                                                                                ; 1       ;
 ; functionGenerate:functionGenerate_inst|always2~8                                                                               ; 1       ;
 ; functionGenerate:functionGenerate_inst|always2~7                                                                               ; 1       ;
 ; functionGenerate:functionGenerate_inst|always2~6                                                                               ; 1       ;
 ; functionGenerate:functionGenerate_inst|always2~5                                                                               ; 1       ;
 ; functionGenerate:functionGenerate_inst|always2~4                                                                               ; 1       ;
+; functionGenerate:functionGenerate_inst|po_flag_dly2                                                                            ; 1       ;
 ; functionGenerate:functionGenerate_inst|always2~1                                                                               ; 1       ;
-; pulse_width[1][0]                                                                                                              ; 1       ;
-; pulse_width[1][1]                                                                                                              ; 1       ;
-; pulse_width[1][2]                                                                                                              ; 1       ;
-; pulse_width[1][3]                                                                                                              ; 1       ;
-; pulse_width[1][4]                                                                                                              ; 1       ;
-; pulse_width[1][5]                                                                                                              ; 1       ;
-; pulse_width[1][6]                                                                                                              ; 1       ;
-; pulse_width[1][7]                                                                                                              ; 1       ;
-; pulse_width[1][8]                                                                                                              ; 1       ;
-; pulse_width[1][9]                                                                                                              ; 1       ;
-; pulse_width[1][10]                                                                                                             ; 1       ;
-; pulse_width[1][11]                                                                                                             ; 1       ;
-; pulse_width[1][12]                                                                                                             ; 1       ;
-; pulse_width[1][13]                                                                                                             ; 1       ;
-; pulse_width[1][14]                                                                                                             ; 1       ;
-; pulse_width[1][15]                                                                                                             ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[12]~37                                                                                           ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[11]~36                                                                                           ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[11]~35                                                                                           ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[10]~34                                                                                           ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[10]~33                                                                                           ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[9]~32                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[9]~31                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[8]~30                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[8]~29                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[7]~28                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[7]~27                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[6]~26                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[6]~25                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[5]~24                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[5]~23                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[4]~22                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[4]~21                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[3]~20                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[3]~19                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[2]~18                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[2]~17                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[1]~16                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[1]~15                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[0]~14                                                                                            ; 1       ;
-; uart_rx:uart_rx_inst|baud_cnt[0]~13                                                                                            ; 1       ;
+; led_reg[0]                                                                                                                     ; 1       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[19]~58                                                       ; 1       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[18]~57                                                       ; 1       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[18]~56                                                       ; 1       ;
@@ -1252,6 +1242,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[1]~22                                                        ; 1       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[0]~21                                                        ; 1       ;
 ; key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[0]~20                                                        ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[12]~37                                                                                           ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[11]~36                                                                                           ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[11]~35                                                                                           ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[10]~34                                                                                           ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[10]~33                                                                                           ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[9]~32                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[9]~31                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[8]~30                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[8]~29                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[7]~28                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[7]~27                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[6]~26                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[6]~25                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[5]~24                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[5]~23                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[4]~22                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[4]~21                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[3]~20                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[3]~19                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[2]~18                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[2]~17                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[1]~16                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[1]~15                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[0]~14                                                                                            ; 1       ;
+; uart_rx:uart_rx_inst|baud_cnt[0]~13                                                                                            ; 1       ;
 ; uart_rx:uart_rx_inst|Add1~6                                                                                                    ; 1       ;
 ; uart_rx:uart_rx_inst|Add1~5                                                                                                    ; 1       ;
 ; uart_rx:uart_rx_inst|Add1~4                                                                                                    ; 1       ;
@@ -1312,67 +1327,67 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; functionGenerate:functionGenerate_inst|Add3~34                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add3~33                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add3~32                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add2~32                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add3~31                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add3~30                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add3~29                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add3~28                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~27                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~26                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~25                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~24                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~23                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~22                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~21                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~20                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~19                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~18                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~17                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~16                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~15                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~14                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~13                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~12                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~11                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~10                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~9                                                                                  ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~8                                                                                  ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~7                                                                                  ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~6                                                                                  ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~5                                                                                  ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~4                                                                                  ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~3                                                                                  ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~2                                                                                  ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~1                                                                                  ; 1       ;
-; functionGenerate:functionGenerate_inst|Add3~0                                                                                  ; 1       ;
-; functionGenerate:functionGenerate_inst|Add2~32                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~31                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~30                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~29                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~28                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~27                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~26                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~25                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~24                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~27                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~26                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~25                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~24                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~23                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~22                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~21                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~20                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~23                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~22                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~21                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~20                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~19                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~18                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~17                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~16                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~19                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~18                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~17                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~16                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~15                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~14                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~13                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~12                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~15                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~14                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~13                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~12                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~11                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~10                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~9                                                                                  ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~8                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~11                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~10                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~9                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~8                                                                                  ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~7                                                                                  ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~6                                                                                  ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~5                                                                                  ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~4                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~7                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~6                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~5                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~4                                                                                  ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~3                                                                                  ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~2                                                                                  ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~1                                                                                  ; 1       ;
+; functionGenerate:functionGenerate_inst|Add3~0                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~3                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~2                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add2~1                                                                                  ; 1       ;
@@ -1410,6 +1425,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; functionGenerate:functionGenerate_inst|Add1~2                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add1~1                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add1~0                                                                                  ; 1       ;
+; functionGenerate:functionGenerate_inst|Add6~36                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~35                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~34                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~33                                                                                 ; 1       ;
@@ -1422,18 +1438,62 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; functionGenerate:functionGenerate_inst|Add6~26                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~25                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~24                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~34                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~33                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~32                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~31                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~30                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~29                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~28                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~27                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~26                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~25                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~24                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~32                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~31                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~30                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~29                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~28                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~27                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~26                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~25                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~24                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~23                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~22                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~21                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~20                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~23                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~22                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~21                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~20                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~23                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~22                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~21                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~20                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~19                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~18                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~17                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~16                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~19                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~18                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~17                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~16                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~19                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~18                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~17                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~16                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~15                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~14                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~13                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~12                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~15                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~14                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~13                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add5~12                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~15                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~14                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~13                                                                                 ; 1       ;
+; functionGenerate:functionGenerate_inst|Add4~12                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~11                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~10                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~9                                                                                  ; 1       ;
@@ -1446,29 +1506,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; functionGenerate:functionGenerate_inst|Add6~2                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~1                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add6~0                                                                                  ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~34                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~33                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~32                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~31                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~30                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~29                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~28                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~27                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~26                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~25                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~24                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~23                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~22                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~21                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~20                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~19                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~18                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~17                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~16                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~15                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~14                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~13                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add5~12                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add5~11                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add5~10                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add5~9                                                                                  ; 1       ;
@@ -1481,27 +1518,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; functionGenerate:functionGenerate_inst|Add5~2                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add5~1                                                                                  ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add5~0                                                                                  ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~32                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~31                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~30                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~29                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~28                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~27                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~26                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~25                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~24                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~23                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~22                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~21                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~20                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~19                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~18                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~17                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~16                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~15                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~14                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~13                                                                                 ; 1       ;
-; functionGenerate:functionGenerate_inst|Add4~12                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add4~11                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add4~10                                                                                 ; 1       ;
 ; functionGenerate:functionGenerate_inst|Add4~9                                                                                  ; 1       ;
@@ -1522,151 +1538,162 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+------------------------+
 ; Routing Resource Type ; Usage                  ;
 +-----------------------+------------------------+
-; Block interconnects   ; 381 / 32,401 ( 1 % )   ;
-; C16 interconnects     ; 1 / 1,326 ( < 1 % )    ;
-; C4 interconnects      ; 170 / 21,816 ( < 1 % ) ;
-; Direct links          ; 106 / 32,401 ( < 1 % ) ;
-; Global clocks         ; 3 / 10 ( 30 % )        ;
-; Local interconnects   ; 217 / 10,320 ( 2 % )   ;
-; R24 interconnects     ; 4 / 1,289 ( < 1 % )    ;
-; R4 interconnects      ; 140 / 28,186 ( < 1 % ) ;
+; Block interconnects   ; 439 / 32,401 ( 1 % )   ;
+; C16 interconnects     ; 0 / 1,326 ( 0 % )      ;
+; C4 interconnects      ; 211 / 21,816 ( < 1 % ) ;
+; Direct links          ; 98 / 32,401 ( < 1 % )  ;
+; Global clocks         ; 4 / 10 ( 40 % )        ;
+; Local interconnects   ; 270 / 10,320 ( 3 % )   ;
+; R24 interconnects     ; 6 / 1,289 ( < 1 % )    ;
+; R4 interconnects      ; 246 / 28,186 ( < 1 % ) ;
 +-----------------------+------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.40) ; Number of LABs  (Total = 30) ;
+; Number of Logic Elements  (Average = 11.79) ; Number of LABs  (Total = 34) ;
 +---------------------------------------------+------------------------------+
-; 1                                           ; 3                            ;
-; 2                                           ; 1                            ;
-; 3                                           ; 1                            ;
+; 1                                           ; 2                            ;
+; 2                                           ; 3                            ;
+; 3                                           ; 0                            ;
 ; 4                                           ; 0                            ;
-; 5                                           ; 0                            ;
+; 5                                           ; 2                            ;
 ; 6                                           ; 0                            ;
-; 7                                           ; 0                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 0                            ;
+; 7                                           ; 2                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 1                            ;
 ; 10                                          ; 1                            ;
 ; 11                                          ; 0                            ;
-; 12                                          ; 1                            ;
-; 13                                          ; 4                            ;
+; 12                                          ; 0                            ;
+; 13                                          ; 3                            ;
 ; 14                                          ; 2                            ;
-; 15                                          ; 2                            ;
-; 16                                          ; 14                           ;
+; 15                                          ; 5                            ;
+; 16                                          ; 13                           ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 2.13) ; Number of LABs  (Total = 30) ;
+; LAB-wide Signals  (Average = 2.18) ; Number of LABs  (Total = 34) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 24                           ;
-; 1 Clock                            ; 24                           ;
+; 1 Async. clear                     ; 27                           ;
+; 1 Clock                            ; 23                           ;
 ; 1 Clock enable                     ; 8                            ;
 ; 1 Sync. clear                      ; 4                            ;
-; 2 Clock enables                    ; 4                            ;
+; 2 Clock enables                    ; 8                            ;
+; 2 Clocks                           ; 4                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 18.67) ; Number of LABs  (Total = 30) ;
+; Number of Signals Sourced  (Average = 17.68) ; Number of LABs  (Total = 34) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
-; 1                                            ; 0                            ;
-; 2                                            ; 4                            ;
+; 1                                            ; 1                            ;
+; 2                                            ; 1                            ;
 ; 3                                            ; 0                            ;
-; 4                                            ; 1                            ;
+; 4                                            ; 3                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 0                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 0                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 1                            ;
-; 12                                           ; 0                            ;
-; 13                                           ; 1                            ;
+; 11                                           ; 0                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 4                            ;
 ; 14                                           ; 1                            ;
-; 15                                           ; 5                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 1                            ;
-; 18                                           ; 1                            ;
-; 19                                           ; 0                            ;
-; 20                                           ; 0                            ;
+; 15                                           ; 3                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 0                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 1                            ;
 ; 21                                           ; 0                            ;
 ; 22                                           ; 0                            ;
 ; 23                                           ; 2                            ;
 ; 24                                           ; 1                            ;
-; 25                                           ; 1                            ;
-; 26                                           ; 1                            ;
-; 27                                           ; 2                            ;
-; 28                                           ; 2                            ;
-; 29                                           ; 1                            ;
-; 30                                           ; 1                            ;
-; 31                                           ; 2                            ;
-; 32                                           ; 1                            ;
+; 25                                           ; 4                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 1                            ;
+; 29                                           ; 2                            ;
+; 30                                           ; 3                            ;
+; 31                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
 +--------------------------------------------------------------------------------+
 ; LAB Signals Sourced Out                                                        ;
 +-------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 7.73) ; Number of LABs  (Total = 30) ;
+; Number of Signals Sourced Out  (Average = 7.32) ; Number of LABs  (Total = 34) ;
 +-------------------------------------------------+------------------------------+
 ; 0                                               ; 0                            ;
-; 1                                               ; 4                            ;
-; 2                                               ; 2                            ;
-; 3                                               ; 2                            ;
-; 4                                               ; 2                            ;
-; 5                                               ; 1                            ;
+; 1                                               ; 5                            ;
+; 2                                               ; 5                            ;
+; 3                                               ; 1                            ;
+; 4                                               ; 3                            ;
+; 5                                               ; 2                            ;
 ; 6                                               ; 2                            ;
-; 7                                               ; 2                            ;
-; 8                                               ; 3                            ;
+; 7                                               ; 1                            ;
+; 8                                               ; 2                            ;
 ; 9                                               ; 1                            ;
-; 10                                              ; 3                            ;
-; 11                                              ; 1                            ;
+; 10                                              ; 4                            ;
+; 11                                              ; 0                            ;
 ; 12                                              ; 0                            ;
-; 13                                              ; 2                            ;
-; 14                                              ; 0                            ;
-; 15                                              ; 1                            ;
-; 16                                              ; 4                            ;
+; 13                                              ; 1                            ;
+; 14                                              ; 2                            ;
+; 15                                              ; 0                            ;
+; 16                                              ; 2                            ;
+; 17                                              ; 2                            ;
+; 18                                              ; 1                            ;
 +-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 13.43) ; Number of LABs  (Total = 30) ;
+; Number of Distinct Inputs  (Average = 13.62) ; Number of LABs  (Total = 34) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
-; 2                                            ; 0                            ;
-; 3                                            ; 3                            ;
-; 4                                            ; 4                            ;
-; 5                                            ; 0                            ;
+; 2                                            ; 1                            ;
+; 3                                            ; 2                            ;
+; 4                                            ; 5                            ;
+; 5                                            ; 1                            ;
 ; 6                                            ; 0                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 2                            ;
-; 9                                            ; 1                            ;
-; 10                                           ; 2                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 2                            ;
-; 13                                           ; 1                            ;
-; 14                                           ; 1                            ;
-; 15                                           ; 0                            ;
-; 16                                           ; 1                            ;
-; 17                                           ; 0                            ;
+; 7                                            ; 2                            ;
+; 8                                            ; 3                            ;
+; 9                                            ; 0                            ;
+; 10                                           ; 0                            ;
+; 11                                           ; 2                            ;
+; 12                                           ; 1                            ;
+; 13                                           ; 2                            ;
+; 14                                           ; 0                            ;
+; 15                                           ; 1                            ;
+; 16                                           ; 2                            ;
+; 17                                           ; 1                            ;
 ; 18                                           ; 0                            ;
-; 19                                           ; 2                            ;
-; 20                                           ; 1                            ;
-; 21                                           ; 3                            ;
-; 22                                           ; 3                            ;
-; 23                                           ; 1                            ;
-; 24                                           ; 1                            ;
+; 19                                           ; 1                            ;
+; 20                                           ; 2                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
+; 23                                           ; 3                            ;
+; 24                                           ; 2                            ;
 ; 25                                           ; 1                            ;
+; 26                                           ; 0                            ;
+; 27                                           ; 0                            ;
+; 28                                           ; 0                            ;
+; 29                                           ; 0                            ;
+; 30                                           ; 0                            ;
+; 31                                           ; 0                            ;
+; 32                                           ; 0                            ;
+; 33                                           ; 1                            ;
+; 34                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
@@ -1785,18 +1812,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+----------------------+-------------------+
 ; Source Clock(s) ; Destination Clock(s) ; Delay Added in ns ;
 +-----------------+----------------------+-------------------+
+; sys_clk         ; sys_clk              ; 2.5               ;
++-----------------+----------------------+-------------------+
 Note: For more information on problematic transfers, consider running the Fitter again with the Optimize hold timing option (Settings Menu) turned off.
 This will disable optimization of problematic paths and expose them for further analysis using the TimeQuest Timing Analyzer.
 
 
-+------------------------------------------------------------+
-; Estimated Delay Added for Hold Timing Details              ;
-+-----------------+----------------------+-------------------+
-; Source Register ; Destination Register ; Delay Added in ns ;
-+-----------------+----------------------+-------------------+
-; rec_byte_cnt[2] ; rec_byte_cnt[3]      ; 0.058             ;
-+-----------------+----------------------+-------------------+
-Note: This table only shows the top 1 path(s) that have the largest delay added for hold.
++---------------------------------------------------------------------------------------------------------+
+; Estimated Delay Added for Hold Timing Details                                                           ;
++------------------------------+------------------------------------------------------+-------------------+
+; Source Register              ; Destination Register                                 ; Delay Added in ns ;
++------------------------------+------------------------------------------------------+-------------------+
+; uart_rx:uart_rx_inst|po_flag ; led_reg[0]                                           ; 2.540             ;
+; uart_en                      ; functionGenerate:functionGenerate_inst|pulse_flag.01 ; 0.433             ;
++------------------------------+------------------------------------------------------+-------------------+
+Note: This table only shows the top 2 path(s) that have the largest delay added for hold.
 
 
 +-----------------+
@@ -1822,18 +1852,19 @@ Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Ass
 Critical Warning (332012): Synopsys Design Constraints File file not found: 'counter.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained generated clocks found in the design
 Info (332144): No user constrained base clocks found in the design
-Info (332096): The command derive_clocks did not find any clocks to derive.  No clocks were created or changed.
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
-Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in TimeQuest to see clock uncertainties.
 Info (332130): Timing requirements not specified -- quality metrics such as performance may be sacrificed to reduce compilation time.
 Info (176353): Automatically promoted node functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component|ipcore_altpll:auto_generated|wire_pll1_clk[0] (placed in counter C0 of PLL_1)
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
 Info (176353): Automatically promoted node sys_clk~input (placed in PIN E1 (CLK1, DIFFCLK_0n))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G2
+Info (176353): Automatically promoted node uart_rx:uart_rx_inst|po_flag 
+    Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
+    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
+        Info (176357): Destination node led_reg[0]
 Info (176353): Automatically promoted node sys_rst_n~input (placed in PIN M15 (CLK6, DIFFCLK_3p))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G9
-    Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node led_reg[0]~0
 Info (176233): Starting register packing
 Info (176235): Finished register packing
     Extra Info (176219): No registers were packed into other blocks
@@ -1845,11 +1876,11 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:01
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 1% of the available device resources in the region that extends from location X11_Y0 to location X22_Y11
+    Info (170196): Router estimated peak interconnect usage is 2% of the available device resources in the region that extends from location X11_Y12 to location X22_Y24
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:01
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.50 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.53 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -1857,10 +1888,10 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file D:/Repos/FireWild/08_counter_myBoard/quartus_prj/output_files/counter.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 5382 megabytes
-    Info: Processing ended: Fri Dec 22 14:45:48 2023
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:07
+    Info: Peak virtual memory: 5379 megabytes
+    Info: Processing ended: Wed Dec 27 16:54:52 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:09
 
 
 +----------------------------+

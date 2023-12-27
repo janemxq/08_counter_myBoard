@@ -4,10 +4,10 @@ sys_rst_n => sys_rst_n.IN4
 key[0] => key[0].IN1
 key[1] => key[1].IN1
 rx => rx.IN1
-pulse_out1 <= functionGenerate:functionGenerate_inst.pulse_out1
-pulse_out2 <= functionGenerate:functionGenerate_inst.pulse_out2
-tx <= uart_tx:uart_tx_inst.tx
-led_out <= led_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+pulse_out1 << functionGenerate:functionGenerate_inst.pulse_out1
+pulse_out2 << functionGenerate:functionGenerate_inst.pulse_out2
+tx << uart_tx:uart_tx_inst.tx
+led_out << led_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_functionGenerate|key_control:key_control_inst
@@ -237,21 +237,37 @@ pulse_width1[14] => Add4.IN2
 pulse_width1[15] => Add1.IN17
 pulse_width1[15] => Add2.IN1
 pulse_width1[15] => Add4.IN1
+pulse_width2[0] => LessThan0.IN32
 pulse_width2[0] => Add4.IN32
+pulse_width2[1] => LessThan0.IN31
 pulse_width2[1] => Add4.IN31
+pulse_width2[2] => LessThan0.IN30
 pulse_width2[2] => Add4.IN30
+pulse_width2[3] => LessThan0.IN29
 pulse_width2[3] => Add4.IN29
+pulse_width2[4] => LessThan0.IN28
 pulse_width2[4] => Add4.IN28
+pulse_width2[5] => LessThan0.IN27
 pulse_width2[5] => Add4.IN27
+pulse_width2[6] => LessThan0.IN26
 pulse_width2[6] => Add4.IN26
+pulse_width2[7] => LessThan0.IN25
 pulse_width2[7] => Add4.IN25
+pulse_width2[8] => LessThan0.IN24
 pulse_width2[8] => Add4.IN24
+pulse_width2[9] => LessThan0.IN23
 pulse_width2[9] => Add4.IN23
+pulse_width2[10] => LessThan0.IN22
 pulse_width2[10] => Add4.IN22
+pulse_width2[11] => LessThan0.IN21
 pulse_width2[11] => Add4.IN21
+pulse_width2[12] => LessThan0.IN20
 pulse_width2[12] => Add4.IN20
+pulse_width2[13] => LessThan0.IN19
 pulse_width2[13] => Add4.IN19
+pulse_width2[14] => LessThan0.IN18
 pulse_width2[14] => Add4.IN18
+pulse_width2[15] => LessThan0.IN17
 pulse_width2[15] => Add4.IN17
 pulse_gap[0] => Add2.IN32
 pulse_gap[0] => Add5.IN34

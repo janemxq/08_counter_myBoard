@@ -1,5 +1,5 @@
 Flow report for counter
-Fri Dec 22 14:45:56 2023
+Wed Dec 27 16:55:01 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Dec 22 14:45:56 2023       ;
+; Flow Status                        ; Successful - Wed Dec 27 16:55:01 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; counter                                     ;
 ; Top-level Entity Name              ; top_functionGenerate                        ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE10F17C8                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 372 / 10,320 ( 4 % )                        ;
-;     Total combinational functions  ; 314 / 10,320 ( 3 % )                        ;
+; Total logic elements               ; 401 / 10,320 ( 4 % )                        ;
+;     Total combinational functions  ; 330 / 10,320 ( 3 % )                        ;
 ;     Dedicated logic registers      ; 205 / 10,320 ( 2 % )                        ;
 ; Total registers                    ; 205                                         ;
 ; Total pins                         ; 9 / 180 ( 5 % )                             ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/22/2023 14:45:40 ;
+; Start date & time ; 12/27/2023 16:54:42 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; counter             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+----------------------+---------------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name          ; Section Id          ;
 +--------------------------------------+---------------------------------------+---------------+----------------------+---------------------+
-; COMPILER_SIGNATURE_ID                ; 181124894814045.170322754014792       ; --            ; --                   ; --                  ;
+; COMPILER_SIGNATURE_ID                ; 181124894814045.170366728226076       ; --            ; --                   ; --                  ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --                   ; tb_functionGenerate ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --                   ; tb_uart_rx          ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; tb_functionGenerate                   ; --            ; --                   ; eda_simulation      ;
@@ -91,11 +91,15 @@ applicable agreement for further details.
 ; EDA_TEST_BENCH_RUN_SIM_FOR           ; 11 ms                                 ; --            ; --                   ; tb_uart_rx          ;
 ; EDA_TIME_SCALE                       ; 100 us                                ; --            ; --                   ; eda_simulation      ;
 ; IP_TOOL_NAME                         ; ALTPLL                                ; --            ; --                   ; --                  ;
+; IP_TOOL_NAME                         ; FIFO                                  ; --            ; --                   ; --                  ;
+; IP_TOOL_VERSION                      ; 13.1                                  ; --            ; --                   ; --                  ;
 ; IP_TOOL_VERSION                      ; 13.1                                  ; --            ; --                   ; --                  ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --                   ; --                  ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --                   ; --                  ;
 ; MISC_FILE                            ; ipcore_dir/ipcore_inst.v              ; --            ; --                   ; --                  ;
 ; MISC_FILE                            ; ipcore_dir/ipcore.ppf                 ; --            ; --                   ; --                  ;
+; MISC_FILE                            ; fifo_ip_inst.v                        ; --            ; --                   ; --                  ;
+; MISC_FILE                            ; fifo_ip_bb.v                          ; --            ; --                   ; --                  ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                     ; --            ; --                   ; --                  ;
 ; OUTPUT_IO_TIMING_FAR_END_VMEAS       ; Half Signal Swing                     ; --            ; --                   ; --                  ;
 ; OUTPUT_IO_TIMING_NEAR_END_VMEAS      ; Half Vccio                            ; --            ; --                   ; --                  ;
@@ -115,12 +119,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:01     ; 1.0                     ; 4645 MB             ; 00:00:01                           ;
-; Fitter                    ; 00:00:05     ; 1.6                     ; 5382 MB             ; 00:00:06                           ;
-; Assembler                 ; 00:00:00     ; 1.0                     ; 4578 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4668 MB             ; 00:00:02                           ;
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 4645 MB             ; 00:00:02                           ;
+; Fitter                    ; 00:00:07     ; 1.9                     ; 5379 MB             ; 00:00:08                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4578 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 4685 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4557 MB             ; 00:00:01                           ;
-; Total                     ; 00:00:09     ; --                      ; --                  ; 00:00:11                           ;
+; Total                     ; 00:00:13     ; --                      ; --                  ; 00:00:14                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
