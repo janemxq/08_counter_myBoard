@@ -1,14 +1,14 @@
-Fitter Status : Successful - Wed Dec 27 16:54:52 2023
+Fitter Status : Successful - Thu Dec 28 15:09:51 2023
 Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Full Version
 Revision Name : counter
 Top-level Entity Name : top_functionGenerate
 Family : Cyclone IV E
 Device : EP4CE10F17C8
 Timing Models : Final
-Total logic elements : 401 / 10,320 ( 4 % )
-    Total combinational functions : 330 / 10,320 ( 3 % )
-    Dedicated logic registers : 205 / 10,320 ( 2 % )
-Total registers : 205
+Total logic elements : 422 / 10,320 ( 4 % )
+    Total combinational functions : 342 / 10,320 ( 3 % )
+    Dedicated logic registers : 224 / 10,320 ( 2 % )
+Total registers : 224
 Total pins : 9 / 180 ( 5 % )
 Total virtual pins : 0
 Total memory bits : 0 / 423,936 ( 0 % )

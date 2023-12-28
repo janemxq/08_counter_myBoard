@@ -6,7 +6,7 @@ module  functionGenerate
 (
     input   wire    sys_clk     ,   //系统时钟50Mhz
     input   wire    sys_rst_n   ,   //全局复位
-	 input   wire    [1:0]   key_select         ,   //输入4位按键
+	 input   wire    [1:0]   pulse_select         ,   //脉冲通道选择
     input   wire  	uart_flag,//是否发送脉冲标志,脉冲信号
 	input 	wire  	[15:0]pulse_width1,   //第一个脉冲的宽度
 	input 	wire  	[15:0]pulse_width2,   //第二个脉冲的宽度
@@ -86,8 +86,8 @@ always@(posedge my_clk or negedge sys_rst_n) begin
 	   end
     else    if((cnt == 0) &&(pulse_en == 1))
 	     begin
-          pulse_out1 <= 1;//第一个脉冲开始
-		  pulse_out2<=1;
+          pulse_out1 <= (pulse_select == 1?1:0);//1;//第一个脉冲开始
+		  pulse_out2<=(pulse_select == 2?1:0);
 		   pulse_flag<= 1;
          end
     else    if((cnt == pulse_width1-1) && (pulse_flag==1))
@@ -99,8 +99,8 @@ always@(posedge my_clk or negedge sys_rst_n) begin
     else if((pulse_width2 >0)&& (pulse_flag==1))
 	  if((cnt == pulse_width1+pulse_gap-1))
 	     begin
-           pulse_out1 <= 1;//第二个脉冲开始
-		   pulse_out2<=1;           		   
+           pulse_out1 <=(pulse_select == 1?1:0);//1 ;//第二个脉冲开始
+		   pulse_out2<=(pulse_select == 2?1:0);           		   
          end
 	  else if(cnt == pulse_width1+pulse_width2+pulse_gap-1)
 	     begin

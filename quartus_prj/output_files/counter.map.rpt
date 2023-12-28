@@ -1,5 +1,5 @@
 Analysis & Synthesis report for counter
-Wed Dec 27 16:54:44 2023
+Thu Dec 28 15:09:37 2023
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -31,9 +31,10 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
  23. altpll Parameter Settings by Entity Instance
  24. Port Connectivity Checks: "functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst"
  25. Port Connectivity Checks: "key_control:key_control_inst|key_filter:key_filter_inst1"
- 26. Elapsed Time Per Partition
- 27. Analysis & Synthesis Messages
- 28. Analysis & Synthesis Suppressed Messages
+ 26. Port Connectivity Checks: "key_control:key_control_inst"
+ 27. Elapsed Time Per Partition
+ 28. Analysis & Synthesis Messages
+ 29. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -59,15 +60,15 @@ applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 27 16:54:44 2023       ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 28 15:09:37 2023       ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Full Version ;
 ; Revision Name                      ; counter                                     ;
 ; Top-level Entity Name              ; top_functionGenerate                        ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 409                                         ;
-;     Total combinational functions  ; 330                                         ;
-;     Dedicated logic registers      ; 205                                         ;
-; Total registers                    ; 205                                         ;
+; Total logic elements               ; 436                                         ;
+;     Total combinational functions  ; 342                                         ;
+;     Dedicated logic registers      ; 224                                         ;
+; Total registers                    ; 224                                         ;
 ; Total pins                         ; 9                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -172,11 +173,12 @@ applicable agreement for further details.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
+;     Processor 2            ; < 0.1%      ;
+;     Processors 3-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -206,20 +208,20 @@ applicable agreement for further details.
 +---------------------------------------------+-----------------+
 ; Resource                                    ; Usage           ;
 +---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 409             ;
+; Estimated Total logic elements              ; 436             ;
 ;                                             ;                 ;
-; Total combinational functions               ; 330             ;
+; Total combinational functions               ; 342             ;
 ; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 130             ;
+;     -- 4 input functions                    ; 141             ;
 ;     -- 3 input functions                    ; 71              ;
-;     -- <=2 input functions                  ; 129             ;
+;     -- <=2 input functions                  ; 130             ;
 ;                                             ;                 ;
 ; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 172             ;
+;     -- normal mode                          ; 184             ;
 ;     -- arithmetic mode                      ; 158             ;
 ;                                             ;                 ;
-; Total registers                             ; 205             ;
-;     -- Dedicated logic registers            ; 205             ;
+; Total registers                             ; 224             ;
+;     -- Dedicated logic registers            ; 224             ;
 ;     -- I/O registers                        ; 0               ;
 ;                                             ;                 ;
 ; I/O pins                                    ; 9               ;
@@ -228,9 +230,9 @@ applicable agreement for further details.
 ;     -- PLLs                                 ; 1               ;
 ;                                             ;                 ;
 ; Maximum fan-out node                        ; sys_rst_n~input ;
-; Maximum fan-out                             ; 205             ;
-; Total fan-out                               ; 1800            ;
-; Average fan-out                             ; 3.25            ;
+; Maximum fan-out                             ; 224             ;
+; Total fan-out                               ; 1922            ;
+; Average fan-out                             ; 3.29            ;
 +---------------------------------------------+-----------------+
 
 
@@ -239,8 +241,8 @@ applicable agreement for further details.
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                  ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_functionGenerate                       ; 330 (78)          ; 205 (111)    ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |top_functionGenerate                                                                                                                ; work         ;
-;    |functionGenerate:functionGenerate_inst| ; 189 (189)         ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst                                                                         ; work         ;
+; |top_functionGenerate                       ; 342 (89)          ; 224 (129)    ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |top_functionGenerate                                                                                                                ; work         ;
+;    |functionGenerate:functionGenerate_inst| ; 190 (190)         ; 30 (30)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst                                                                         ; work         ;
 ;       |ipcore:pll_ip_inst|                  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst                                                      ; work         ;
 ;          |altpll:altpll_component|          ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component                              ; work         ;
 ;             |ipcore_altpll:auto_generated|  ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_functionGenerate|functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component|ipcore_altpll:auto_generated ; work         ;
@@ -271,37 +273,41 @@ Encoding Type:  One-Hot
 +---------------+-------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                  ;
-+-----------------------------------------------------+---------------------------------------------------------------+
-; Register name                                       ; Reason for Removal                                            ;
-+-----------------------------------------------------+---------------------------------------------------------------+
-; uart_tx:uart_tx_inst|work_en                        ; Stuck at GND due to stuck port data_in                        ;
-; uart_tx:uart_tx_inst|baud_cnt[0..12]                ; Stuck at GND due to stuck port data_in                        ;
-; uart_tx:uart_tx_inst|bit_flag                       ; Stuck at GND due to stuck port data_in                        ;
-; uart_tx:uart_tx_inst|tx                             ; Stuck at VCC due to stuck port clock_enable                   ;
-; uart_test_data[0..7]                                ; Lost fanout                                                   ;
-; uart_tx:uart_tx_inst|bit_cnt[0..3]                  ; Lost fanout                                                   ;
-; functionGenerate:functionGenerate_inst|pulse_out2   ; Merged with functionGenerate:functionGenerate_inst|pulse_out1 ;
-; functionGenerate:functionGenerate_inst|pulse_flag~6 ; Lost fanout                                                   ;
-; Total Number of Removed Registers = 30              ;                                                               ;
-+-----------------------------------------------------+---------------------------------------------------------------+
++---------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                ;
++-----------------------------------------------------+---------------------------------------------+
+; Register name                                       ; Reason for Removal                          ;
++-----------------------------------------------------+---------------------------------------------+
+; uart_test_data[2..7]                                ; Stuck at GND due to stuck port data_in      ;
+; po_flag2                                            ; Stuck at GND due to stuck port data_in      ;
+; uart_tx:uart_tx_inst|work_en                        ; Stuck at GND due to stuck port data_in      ;
+; uart_tx:uart_tx_inst|baud_cnt[0..12]                ; Stuck at GND due to stuck port data_in      ;
+; uart_tx:uart_tx_inst|bit_flag                       ; Stuck at GND due to stuck port data_in      ;
+; uart_tx:uart_tx_inst|tx                             ; Stuck at VCC due to stuck port clock_enable ;
+; uart_tx:uart_tx_inst|bit_cnt[0..3]                  ; Stuck at GND due to stuck port data_in      ;
+; functionGenerate:functionGenerate_inst|pulse_flag~6 ; Lost fanout                                 ;
+; Total Number of Removed Registers = 28              ;                                             ;
++-----------------------------------------------------+---------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                           ;
-+------------------------------+---------------------------+----------------------------------------------------------------------------+
-; Register name                ; Reason for Removal        ; Registers Removed due to This Register                                     ;
-+------------------------------+---------------------------+----------------------------------------------------------------------------+
-; uart_tx:uart_tx_inst|work_en ; Stuck at GND              ; uart_tx:uart_tx_inst|baud_cnt[12], uart_tx:uart_tx_inst|baud_cnt[11],      ;
-;                              ; due to stuck port data_in ; uart_tx:uart_tx_inst|baud_cnt[9], uart_tx:uart_tx_inst|baud_cnt[8],        ;
-;                              ;                           ; uart_tx:uart_tx_inst|baud_cnt[7], uart_tx:uart_tx_inst|baud_cnt[5],        ;
-;                              ;                           ; uart_tx:uart_tx_inst|baud_cnt[3], uart_tx:uart_tx_inst|baud_cnt[2],        ;
-;                              ;                           ; uart_tx:uart_tx_inst|baud_cnt[1], uart_tx:uart_tx_inst|baud_cnt[0],        ;
-;                              ;                           ; uart_tx:uart_tx_inst|bit_flag, uart_tx:uart_tx_inst|tx, uart_test_data[7], ;
-;                              ;                           ; uart_tx:uart_tx_inst|bit_cnt[3], uart_tx:uart_tx_inst|bit_cnt[2],          ;
-;                              ;                           ; uart_tx:uart_tx_inst|bit_cnt[1], uart_tx:uart_tx_inst|bit_cnt[0]           ;
-+------------------------------+---------------------------+----------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                           ;
++-------------------+---------------------------+-----------------------------------------------------------------------+
+; Register name     ; Reason for Removal        ; Registers Removed due to This Register                                ;
++-------------------+---------------------------+-----------------------------------------------------------------------+
+; po_flag2          ; Stuck at GND              ; uart_tx:uart_tx_inst|work_en, uart_tx:uart_tx_inst|baud_cnt[12],      ;
+;                   ; due to stuck port data_in ; uart_tx:uart_tx_inst|baud_cnt[11], uart_tx:uart_tx_inst|baud_cnt[10], ;
+;                   ;                           ; uart_tx:uart_tx_inst|baud_cnt[9], uart_tx:uart_tx_inst|baud_cnt[8],   ;
+;                   ;                           ; uart_tx:uart_tx_inst|baud_cnt[7], uart_tx:uart_tx_inst|baud_cnt[6],   ;
+;                   ;                           ; uart_tx:uart_tx_inst|baud_cnt[5], uart_tx:uart_tx_inst|baud_cnt[4],   ;
+;                   ;                           ; uart_tx:uart_tx_inst|baud_cnt[3], uart_tx:uart_tx_inst|baud_cnt[2],   ;
+;                   ;                           ; uart_tx:uart_tx_inst|baud_cnt[1], uart_tx:uart_tx_inst|baud_cnt[0],   ;
+;                   ;                           ; uart_tx:uart_tx_inst|bit_flag, uart_tx:uart_tx_inst|bit_cnt[3],       ;
+;                   ;                           ; uart_tx:uart_tx_inst|bit_cnt[2], uart_tx:uart_tx_inst|bit_cnt[1],     ;
+;                   ;                           ; uart_tx:uart_tx_inst|bit_cnt[0]                                       ;
+; uart_test_data[7] ; Stuck at GND              ; uart_tx:uart_tx_inst|tx                                               ;
+;                   ; due to stuck port data_in ;                                                                       ;
++-------------------+---------------------------+-----------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -309,12 +315,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 205   ;
+; Total registers                              ; 224   ;
 ; Number of registers using Synchronous Clear  ; 58    ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 205   ;
+; Number of registers using Asynchronous Clear ; 223   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 140   ;
+; Number of registers using Clock Enable       ; 160   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -324,12 +330,12 @@ Encoding Type:  One-Hot
 +----------------------------------------+---------+
 ; Inverted Register                      ; Fan out ;
 +----------------------------------------+---------+
-; pulse_width[0][2]                      ; 3       ;
-; pulse_width[1][2]                      ; 2       ;
-; pulse_width[0][0]                      ; 3       ;
-; pulse_width[1][0]                      ; 2       ;
-; pulse_gap[2]                           ; 2       ;
 ; pulse_gap[0]                           ; 2       ;
+; pulse_width[0][0]                      ; 3       ;
+; pulse_gap[2]                           ; 2       ;
+; pulse_width[0][2]                      ; 3       ;
+; pulse_width[1][0]                      ; 2       ;
+; pulse_width[1][2]                      ; 2       ;
 ; uart_rx:uart_rx_inst|rx_reg3           ; 2       ;
 ; uart_rx:uart_rx_inst|rx_reg2           ; 2       ;
 ; uart_rx:uart_rx_inst|rx_reg1           ; 1       ;
@@ -342,10 +348,11 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------+
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |top_functionGenerate|pulse_width[0][11]                                                   ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |top_functionGenerate|pulse_width[1][3]                                                    ;
-; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |top_functionGenerate|pulse_gap[3]                                                         ;
-; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top_functionGenerate|key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[7] ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |top_functionGenerate|pulse_width[0][5]                                                    ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |top_functionGenerate|pulse_width[1][4]                                                    ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |top_functionGenerate|pulse_gap[7]                                                         ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |top_functionGenerate|key_control:key_control_inst|key_filter:key_filter_inst0|cnt_20ms[8] ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |top_functionGenerate|functionGenerate:functionGenerate_inst|pulse_out2                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_functionGenerate|pulse_width[0][2]                                                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_functionGenerate|pulse_width[1][2]                                                    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |top_functionGenerate|pulse_gap[0]                                                         ;
@@ -840,6 +847,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "key_control:key_control_inst"                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; key_select ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
@@ -855,7 +871,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Wed Dec 27 16:54:42 2023
+    Info: Processing started: Thu Dec 28 15:09:35 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off counter -c counter
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /repos/firewild/08_counter_myboard/rtl/i2c_rw_data.v
@@ -893,15 +909,18 @@ Warning (10222): Verilog HDL Parameter Declaration warning at i2c_ctrl.v(47): Pa
 Warning (10222): Verilog HDL Parameter Declaration warning at i2c_ctrl.v(49): Parameter Declaration in module "i2c_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List
 Warning (10222): Verilog HDL Parameter Declaration warning at i2c_ctrl.v(66): Parameter Declaration in module "i2c_ctrl" behaves as a Local Parameter Declaration because the module has a Module Parameter Port List
 Info (12127): Elaborating entity "top_functionGenerate" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top_functionGenerate.v(42): object "i" assigned a value but never read
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(48): truncated value with size 2 to match size of target (1)
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(227): truncated value with size 16 to match size of target (8)
-Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(244): truncated value with size 32 to match size of target (4)
+Warning (10036): Verilog HDL or VHDL warning at top_functionGenerate.v(43): object "i" assigned a value but never read
+Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(49): truncated value with size 2 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at top_functionGenerate.v(242): truncated value with size 32 to match size of target (4)
 Info (12128): Elaborating entity "key_control" for hierarchy "key_control:key_control_inst"
 Warning (10230): Verilog HDL assignment warning at key_control.v(54): truncated value with size 4 to match size of target (2)
 Warning (10230): Verilog HDL assignment warning at key_control.v(56): truncated value with size 32 to match size of target (2)
 Info (12128): Elaborating entity "key_filter" for hierarchy "key_control:key_control_inst|key_filter:key_filter_inst1"
 Info (12128): Elaborating entity "functionGenerate" for hierarchy "functionGenerate:functionGenerate_inst"
+Warning (10230): Verilog HDL assignment warning at functionGenerate.v(89): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at functionGenerate.v(90): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at functionGenerate.v(102): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at functionGenerate.v(103): truncated value with size 32 to match size of target (1)
 Info (12128): Elaborating entity "ipcore" for hierarchy "functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst"
 Info (12128): Elaborating entity "altpll" for hierarchy "functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component"
 Info (12130): Elaborated megafunction instantiation "functionGenerate:functionGenerate_inst|ipcore:pll_ip_inst|altpll:altpll_component"
@@ -972,20 +991,20 @@ Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal 
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "tx" is stuck at VCC
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 13 registers lost all their fanouts during netlist optimizations.
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file D:/Repos/FireWild/08_counter_myBoard/quartus_prj/output_files/counter.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "key[1]"
-Info (21057): Implemented 420 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 448 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 410 logic cells
+    Info (21061): Implemented 438 logic cells
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 19 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 22 warnings
     Info: Peak virtual memory: 4645 megabytes
-    Info: Processing ended: Wed Dec 27 16:54:44 2023
+    Info: Processing ended: Thu Dec 28 15:09:37 2023
     Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:02
 

@@ -4,10 +4,10 @@ sys_rst_n => sys_rst_n.IN4
 key[0] => key[0].IN1
 key[1] => key[1].IN1
 rx => rx.IN1
-pulse_out1 << functionGenerate:functionGenerate_inst.pulse_out1
-pulse_out2 << functionGenerate:functionGenerate_inst.pulse_out2
-tx << uart_tx:uart_tx_inst.tx
-led_out << led_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+pulse_out1 <= functionGenerate:functionGenerate_inst.pulse_out1
+pulse_out2 <= functionGenerate:functionGenerate_inst.pulse_out2
+tx <= uart_tx:uart_tx_inst.tx
+led_out <= led_reg[0].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_functionGenerate|key_control:key_control_inst
@@ -186,8 +186,10 @@ sys_rst_n => pulse_out1~reg0.ACLR
 sys_rst_n => po_flag_dly2.ACLR
 sys_rst_n => po_flag_dly1.ACLR
 sys_rst_n => pulse_flag~4.DATAIN
-key_select[0] => ~NO_FANOUT~
-key_select[1] => ~NO_FANOUT~
+pulse_select[0] => Equal3.IN0
+pulse_select[0] => Equal4.IN31
+pulse_select[1] => Equal3.IN31
+pulse_select[1] => Equal4.IN0
 uart_flag => po_flag_dly1.DATAIN
 pulse_width1[0] => Add1.IN32
 pulse_width1[0] => Add2.IN16
