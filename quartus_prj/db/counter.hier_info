@@ -8,6 +8,8 @@ pulse_out1 <= functionGenerate:functionGenerate_inst.pulse_out1
 pulse_out2 <= functionGenerate:functionGenerate_inst.pulse_out2
 tx <= uart_tx:uart_tx_inst.tx
 led_out <= led_reg[0].DB_MAX_OUTPUT_PORT_TYPE
+relay_out1 <= <GND>
+relay_out2 <= relay_reg2.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_functionGenerate|key_control:key_control_inst

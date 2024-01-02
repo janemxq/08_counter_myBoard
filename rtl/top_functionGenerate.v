@@ -10,7 +10,9 @@ module  top_functionGenerate
     output  wire            pulse_out1,     //输出第一路脉冲信号
 	output  wire            pulse_out2,     //输出第二路脉冲信号
 	output  wire    tx     ,         //串口发送数据
-	output  wire    led_out  //调试灯
+	output  wire    led_out,  //调试灯
+	output  wire    relay_out1 , //第一路继电器
+	output  wire    relay_out2  //第二路继电器
 );
 
 //********************************************************************//
@@ -42,12 +44,14 @@ reg  po_flag2=0;
 
 integer i = 0;
 reg   [1:0]led_reg;
-
+reg   relay_reg1;
+reg   relay_reg2;
 // 接收数据的上升沿判断
 
 reg    [7:0]   uart_test_data;
 assign  led_out = led_reg;
-
+assign  relay_out1 = relay_reg1;
+assign  relay_out2 = relay_reg2;
 //********************************************************************//
 //*************************** Instantiation **************************//
 //********************************************************************//
@@ -220,7 +224,8 @@ always@(posedge po_flag or negedge sys_rst_n)
 								  //enable_Pulse[0]<=rx_data[1];
 								  //enable_Pulse[1]<=rx_data[2];
                                   //po_flag2<=1;
-								  uart_test_data<=	pulse_select;							 
+								  uart_test_data<=	pulse_select;
+                                  //relay_reg2	<=	~relay_reg2;							  
 								end							
 							default:
 								 begin
