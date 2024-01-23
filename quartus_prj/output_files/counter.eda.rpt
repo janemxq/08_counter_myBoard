@@ -1,5 +1,5 @@
 EDA Netlist Writer report for counter
-Tue Jan 02 14:28:10 2024
+Tue Jan 23 11:34:55 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Full Version
 
 
@@ -36,7 +36,7 @@ applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Tue Jan 02 14:28:10 2024 ;
+; EDA Netlist Writer Status ; Successful - Tue Jan 23 11:34:55 2024 ;
 ; Revision Name             ; counter                               ;
 ; Top-level Entity Name     ; top_functionGenerate                  ;
 ; Family                    ; Cyclone IV E                          ;
@@ -88,7 +88,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit EDA Netlist Writer
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Full Version
-    Info: Processing started: Tue Jan 02 14:28:09 2024
+    Info: Processing started: Tue Jan 23 11:34:54 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off counter -c counter
 Warning (202000): An incorrect timescale is selected for the Verilog Output (.VO) file of this PLL design. It's required that the timescale should be 1 ps when simulating a PLL design in a third party EDA tool.
 Info (204019): Generated file counter_8_1200mv_85c_slow.vo in folder "D:/Repos/FireWild/08_counter_myBoard/quartus_prj/simulation/modelsim/" for EDA simulation tool
@@ -104,7 +104,7 @@ Info (204019): Generated file counter_min_1200mv_0c_v_fast.sdo in folder "D:/Rep
 Info (204019): Generated file counter_v.sdo in folder "D:/Repos/FireWild/08_counter_myBoard/quartus_prj/simulation/modelsim/" for EDA simulation tool
 Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4569 megabytes
-    Info: Processing ended: Tue Jan 02 14:28:10 2024
+    Info: Processing ended: Tue Jan 23 11:34:55 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

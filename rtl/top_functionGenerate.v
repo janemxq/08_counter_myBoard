@@ -199,7 +199,7 @@ always@(posedge po_flag or negedge sys_rst_n)
 						  case(rx_data[0]) 
 							'd7://头字符
 								begin
-								  //led_reg<=~led_reg; 
+								  led_reg<=~led_reg; 
 								 /* */ 
 								 if({rx_data[3],rx_data[4]}<=4)
 								   pulse_width[0]<='d4;
@@ -219,7 +219,7 @@ always@(posedge po_flag or negedge sys_rst_n)
 								  else pulse_select<=0; */
 								  pulse_select<={(rx_data[2]==1?1'b1:1'b0),(rx_data[1]==1?1'b1:1'b0)};
 								  uart_en<=1;//必须放在脉宽和间隔设置的下面，否则下个po_flag才能生效
-								  if(pulse_select ==2)led_reg<=~led_reg;
+								 // if(pulse_select ==2)led_reg<=~led_reg;
 								  //if((rx_data[8] == 'h12)||(rx_data[8] == 'h5))led_reg<=~led_reg;
 								  //enable_Pulse[0]<=rx_data[1];
 								  //enable_Pulse[1]<=rx_data[2];
