@@ -82,9 +82,9 @@ key_control key_control_inst
 	.sys_rst_n (sys_rst_n  ),   //全局复位
 	.pulse_select  (pulse_select ), //输入4位按键
 	.uart_flag (enable_Pulse),  //uart_en uart_en po_flag2串口确认发脉冲信号
-    .pulse_width1(pulse_width[0]),   //第一个脉冲的宽度 10ns一个单位
-	.pulse_width2(pulse_width[1]),   //第二个脉冲的宽度 10ns一个单位  
-	.pulse_gap(pulse_gap),   //脉冲之间的间隔 10ns一个单位
+    .pulse_width1(pulse_width[0]),   //第一个脉冲的宽度 10ns一个单位 1500(15us)
+	.pulse_width2(pulse_width[1]),   //第二个脉冲的宽度 10ns一个单位 500(5us)
+	.pulse_gap(pulse_gap),   //脉冲之间的间隔 10ns一个单位 500(5us)
 
 	.pulse_out1  (pulse_out1 ) , 
 	.pulse_out2   (pulse_out2)
@@ -140,16 +140,23 @@ uart_tx_inst
 //按键单独可以，如果和接收信号或了以后就不行了，待研究。
 always@(posedge sys_clk or negedge sys_rst_n)
        if(sys_rst_n == 1'b0)
+	      begin
+		  /*  第一个脉冲的宽度 10ns一个单位 1500(15us) 
+				第二个脉冲的宽度 10ns一个单位 500(5us) 
+				脉冲之间的间隔 10ns一个单位 500(5us)*/
 		   enable_Pulse<=0;
+		   pulse_width[0]<=1500;pulse_width[1]<=500; 
+		   pulse_gap     <=500;pulse_select<=1;
        /*  else if((key_en == 1))//(uart_en ==1)||
 		   enable_Pulse[0]<=1;
 		else if((uart_en ==1))
 		   enable_Pulse[0]<=1; */
 		/* else if(uart_en == 1)
 		   enable_Pulse<=1; */
-		else if((key_en == 1)||(uart_en == 1))//
+		   end
+		else if((key_en == 1))//||(uart_en == 1)
 		  begin
-		   //led_reg <= ~led_reg;
+		   led_reg <= ~led_reg;
 		   enable_Pulse<=1;
 		  end		   
 		else
@@ -175,7 +182,9 @@ always@(posedge sys_clk or negedge sys_rst_n)
 		   
 // 07 01 01 08 05 00  发脉冲命令，第一个字节是标识头
 //第二个字节是第一个脉冲使能 ，第三个字节是第一个脉冲使能 ，
-//第四、五个字节是第一个脉冲的脉冲宽度 ,第六、七个字节 第二路脉冲的脉冲宽度，第八、九个字节 两个脉冲的间隔	  
+//第四、五个字节是第一个脉冲的脉冲宽度 ,第六、七个字节 第二路脉冲的脉冲宽度，第八、九个字节 两个脉冲的间隔	
+// 暂时不用串口，只用按键的  
+/*
 always@(posedge po_flag or negedge sys_rst_n)
         if(sys_rst_n == 1'b0)
 			 begin
@@ -183,8 +192,11 @@ always@(posedge po_flag or negedge sys_rst_n)
 				 rx_data[0]<=1'b0;rx_data[1]<=1'b0;rx_data[2]<=1'b0;rx_data[3]<=1'b0;
 				rx_data[4]<=1'b0;rx_data[5]<=1'b0;rx_data[6]<=1'b0;rx_data[7]<=1'b0;
 				rx_data[8]<=1'b0;
-				/**/pulse_width[0]<=5;pulse_width[1]<=5; 
-			    pulse_gap     <=5;pulse_select<=0;
+				// 第一个脉冲的宽度 10ns一个单位 1500(15us) 
+				//第二个脉冲的宽度 10ns一个单位 500(5us) 
+				//脉冲之间的间隔 10ns一个单位 500(5us)
+				pulse_width[0]<=1500;pulse_width[1]<=500; 
+			    pulse_gap     <=500;pulse_select<=0;
 				uart_en<=0;
 				//enable_Pulse[0]<=0;	enable_Pulse[1]<=0;	
 			end         
@@ -199,8 +211,7 @@ always@(posedge po_flag or negedge sys_rst_n)
 						  case(rx_data[0]) 
 							'd7://头字符
 								begin
-								  led_reg<=~led_reg; 
-								 /* */ 
+								  //led_reg<=~led_reg; 								   
 								 if({rx_data[3],rx_data[4]}<=4)
 								   pulse_width[0]<='d4;
 								  else
@@ -214,9 +225,9 @@ always@(posedge po_flag or negedge sys_rst_n)
 								     pulse_gap<='d4;
 								  else
 								     pulse_gap     <={rx_data[7],rx_data[8]}; 
-								 /*  if(rx_data[1]==1)pulse_select<=1;
-								  else if(rx_data[2]==1)pulse_select<=2;
-								  else pulse_select<=0; */
+								 // if(rx_data[1]==1)pulse_select<=1;
+								 // else if(rx_data[2]==1)pulse_select<=2;
+								 // else pulse_select<=0; 
 								  pulse_select<={(rx_data[2]==1?1'b1:1'b0),(rx_data[1]==1?1'b1:1'b0)};
 								  uart_en<=1;//必须放在脉宽和间隔设置的下面，否则下个po_flag才能生效
 								 // if(pulse_select ==2)led_reg<=~led_reg;
@@ -231,7 +242,7 @@ always@(posedge po_flag or negedge sys_rst_n)
 								 begin
 								  //enable_Pulse[0]<=0;
 								  //enable_Pulse[1]<=0;	
-								 /* */ pulse_width[0]<=0;
+								  pulse_width[0]<=0;
 								  pulse_width[1]<=0;
 								  pulse_gap     <=0; 
 								  pulse_select<=0;
@@ -248,10 +259,6 @@ always@(posedge po_flag or negedge sys_rst_n)
                     end					
                     //led_reg = ~led_reg;	
 		   end
-		 /*  else
-		   begin
-		   uart_en<=0;
-		   //po_flag2<=0;
-		  end */
+		 */
 		   
 endmodule
